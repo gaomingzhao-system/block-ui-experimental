@@ -1,6 +1,6 @@
 # Block UI
 
-Small, self-contained HTML and CSS blocks for pages and blogs. Copy a fragment, keep its embedded styles, and edit the content. No installation, JavaScript, TypeScript, framework, CDN, font download, or build step.
+A compact library of 14 self-contained HTML and CSS components for interfaces, pages, and blogs. Copy a fragment, keep its embedded styles, and edit the content. No installation, JavaScript, TypeScript, framework, CDN, font download, or build step.
 
 The visual language takes inspiration from [daisyUI](https://daisyui.com/components/): clear typography, soft surfaces, rounded corners, and a focused accent color. The implementation is original vanilla HTML/CSS and does not depend on daisyUI or Tailwind.
 
@@ -17,18 +17,34 @@ The documentation also works when served by any static file server. Its HTML and
 
 ## The collection
 
-| Block | Source | Purpose |
+| Component family | Source | Purpose |
 | --- | --- | --- |
+| Button | [button.html](components/button.html) | Primary, outline, ghost, and disabled native button styles |
+| Avatar | [avatar.html](components/avatar.html) | Initials avatars in three sizes, with accessible names |
+| Badge | [badge.html](components/badge.html) | Neutral, primary, and success labels |
+| Text field | [text-field.html](components/text-field.html) | A labeled native email input with helper text |
+| Checkbox and switch | [selection-control.html](components/selection-control.html) | Native checkbox, switch, and disabled states |
+| Carousel | [carousel.html](components/carousel.html) | A finite row of cards with native scrolling and CSS scroll snap |
+| FAQ | [accordion.html](components/accordion.html) | Independent native `details` disclosures |
 | Article card | [article-card.html](components/article-card.html) | A story title, short introduction, reading time, and link |
 | Callout | [callout.html](components/callout.html) | A contextual tip or note |
 | Quote | [quote.html](components/quote.html) | A semantic quotation with attribution |
-| FAQ | [accordion.html](components/accordion.html) | Independent native `details` disclosures |
+| Comparison table | [table.html](components/table.html) | Captioned data with row/column headers and local horizontal scrolling |
 | Author card | [author-card.html](components/author-card.html) | A compact author introduction |
 | Steps | [steps.html](components/steps.html) | An ordered process |
-| Comparison table | [table.html](components/table.html) | Captioned data with row/column headers and local horizontal scrolling |
 | Call to action | [cta.html](components/cta.html) | A heading, supporting text, and navigation link |
 
 `components/` is the canonical source. `docs/` contains the separate static documentation site, live previews, selectable source, and self-contained download links. Sample people and quotations are fictional; `example.com` destinations are placeholders to replace.
+
+Variants stay in the same family. To use one button, avatar, or badge variant, keep the root and its stylesheet and remove the examples you do not need.
+
+### Native controls
+
+Buttons are style specimens with explicit `type="button"`, so pasting them into a form does not submit it accidentally. Choose the correct native button type for the host form's action, such as `submit` or `reset`; the sample does not define an application action. Links in the content blocks use native navigation.
+
+The email field, checkbox, and switch use wrapping labels, so copies do not require unique IDs. Form inputs omit `name` attributes: add the names your enclosing form expects when collecting values. The switch derives its state from the native checkbox's `checked` state. These local input states do not save settings or send data on their own. When editing the email hint, update both the visible helper text and `aria-description`.
+
+The carousel is a finite, manually scrolled row with a named, keyboard-focusable track and labeled slides. Swipe, use the native scrollbar, focus the track and use arrow keys, or Tab through the slide links. It uses [CSS scroll snap](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-type), keeps all slide content available, and has no autoplay. It has no scripted previous/next controls or active-slide announcements. When adding or removing slides, update their position labels. Print styling lays all slides out in a vertical flow.
 
 ## Fragment contract
 
@@ -88,7 +104,7 @@ Edit a block’s CSS, or set its optional custom properties on a parent:
 | `--bui-tint` | `#f1edff` | Soft accent surface |
 | `--bui-border` | `#e4e2eb` | Dividers and borders |
 
-Each property has a local fallback. Copying a fragment alone produces the light default; the documentation’s dark theme is a demonstration of inherited overrides and is not included in downloaded fragments. Change foreground/background pairs together and recheck contrast.
+Each property has a local fallback. Copying a fragment alone produces the light default; the documentation's dark theme is a demonstration of inherited overrides and is not included in downloaded fragments. Change foreground/background pairs together and recheck contrast.
 
 `@scope` contains the block’s selectors; it is not Shadow DOM encapsulation. Host rules, inheritance, or `!important` declarations can still affect it. Test in the actual host stylesheet and container. The documentation keeps its own styles in cascade layers to avoid overriding component styles.
 
@@ -96,7 +112,7 @@ Each property has a local fallback. Copying a fragment alone produces the light 
 
 Use a modern browser that supports [CSS `@scope`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope). Without it, the content and native FAQ behavior remain available, but the block’s scoped styling is not applied. The documentation theme switch additionally uses `:has()` and retains its setting only for the current page view.
 
-Fluid spacing, logical properties, wrapping flex layouts, and local table overflow are used without viewport-specific scripts. There are no animations. Native links, focusable summaries, visible focus outlines, ordered lists, captions, and header scopes provide the accessibility foundation; adjust labels and heading levels to your content.
+Fluid spacing, logical properties, wrapping flex layouts, and local table/carousel overflow are used without viewport-specific scripts. There are no animations. Native buttons, labeled inputs, links, focusable summaries/scroll tracks, visible focus outlines, ordered lists, captions, and header scopes provide the accessibility foundation; adjust labels and heading levels to your content.
 
 Your site’s Content Security Policy must permit each embedded stylesheet. A strict policy can use matching style hashes or server-provided nonces on the `style` elements. Do not weaken an existing policy merely to paste a block. The documentation has a restrictive policy that blocks scripts and network resources other than its local stylesheet, while allowing its embedded component styles.
 

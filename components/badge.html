@@ -1,0 +1,14 @@
+<div role="group" aria-label="Badge styles">
+  <style>
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font: 650 .75rem/1.5 system-ui, sans-serif; }
+      :scope > span { box-sizing: border-box; display: inline-flex; align-items: center; max-inline-size: 100%; padding: .2rem .65rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 100px; background: var(--bui-surface, #fff); color: var(--bui-muted, #585c70); overflow-wrap: anywhere; }
+      :scope > span[data-tone="primary"] { border-color: var(--bui-primary, #5943d6); background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); }
+      :scope > span[data-tone="success"] { border-color: #b9dbc8; background: #e8f5ed; color: #166047; }
+      @media (forced-colors: active) { :scope > span { border-color: CanvasText; } }
+    }
+  </style>
+  <span>Draft</span>
+  <span data-tone="primary">New</span>
+  <span data-tone="success">Published</span>
+</div>

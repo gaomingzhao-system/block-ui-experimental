@@ -1,0 +1,17 @@
+<div>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > label { display: grid; gap: .5rem; font-size: .875rem; font-weight: 650; }
+      :scope > label > input { box-sizing: border-box; inline-size: 100%; min-inline-size: 0; min-block-size: 2.875rem; padding: .625rem .875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: .625rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.5 system-ui, sans-serif; }
+      :scope > label > input::placeholder { color: var(--bui-muted, #585c70); opacity: 1; }
+      :scope > label > input:focus-visible { border-color: var(--bui-primary, #5943d6); outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; }
+      :scope > label > input:disabled { cursor: not-allowed; background: var(--bui-tint, #f1edff); color: var(--bui-muted, #585c70); }
+      :scope > p { margin: .5rem 0 0; color: var(--bui-muted, #585c70); font-size: .8125rem; }
+    }
+  </style>
+  <label>Email address
+    <input type="email" autocomplete="email" placeholder="you@example.com" aria-description="Use an address you check regularly.">
+  </label>
+  <p>Use an address you check regularly.</p>
+</div>

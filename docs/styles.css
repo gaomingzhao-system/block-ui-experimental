@@ -135,6 +135,7 @@
     background-size: 14px 14px;
   }
   .docs-stage > :first-child { margin-inline: auto; }
+  .docs-usage { margin: 0; padding: .85rem 1.2rem; border-inline: 1px solid var(--docs-line); background: var(--docs-surface); color: var(--docs-muted); font-size: .75rem; line-height: 1.7; }
   .docs-source { border: 1px solid var(--docs-line); border-block-start: 0; border-radius: 0 0 .85rem .85rem; background: var(--docs-surface); min-inline-size: 0; }
   .docs-source > summary { min-block-size: 3.25rem; padding: .9rem 1.2rem; cursor: pointer; font-size: .8rem; font-weight: 700; }
   .docs-source > summary:hover { color: var(--docs-primary); }
