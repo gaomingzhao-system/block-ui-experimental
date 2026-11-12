@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Copy, customize, embed, and publish self-contained HTML and CSS components. Understand browser support and manual copying.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Quick start · Block UI</title>
+  <link rel="stylesheet" href="./assets/site.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="docs-shell">
+  <a class="docs-skip-link" href="#main">Skip to content</a>
+  <header class="docs-header">
+    <a class="docs-brand" href="./index.html" aria-label="Block UI home"><span class="docs-brand-mark" aria-hidden="true">b.</span><span>block<span class="docs-brand-light">ui</span></span></a>
+    <nav class="docs-topnav" aria-label="Main navigation">
+      <a href="./index.html#components">Components</a>
+      <a href="./guide.html">Guide</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="docs-theme"><input id="docs-dark" class="docs-theme-input" type="checkbox"><label class="docs-theme-label" for="docs-dark">Dark theme</label></div>
+  </header>
+  <div class="docs-layout">
+    <aside class="docs-sidebar"><nav aria-label="Documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="./index.html">Overview</a>
+      <a href="./guide.html" class="is-active" aria-current="page">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="./components/article-card.html">Article card</a><a href="./components/callout.html">Callout</a><a href="./components/quote.html">Quote</a><a href="./components/accordion.html">Accordion</a><a href="./components/link-button.html">Link button</a><a href="./components/badges.html">Badges</a><a href="./components/table.html">Table</a><a href="./components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="./examples/article.html">Example article</a>
+      <a href="./guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></aside>
+    <main class="docs-main" id="main" tabindex="-1">
+      <details class="docs-mobile-nav"><summary>Browse documentation</summary><nav aria-label="Mobile documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="./index.html">Overview</a>
+      <a href="./guide.html" class="is-active" aria-current="page">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="./components/article-card.html">Article card</a><a href="./components/callout.html">Callout</a><a href="./components/quote.html">Quote</a><a href="./components/accordion.html">Accordion</a><a href="./components/link-button.html">Link button</a><a href="./components/badges.html">Badges</a><a href="./components/table.html">Table</a><a href="./components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="./examples/article.html">Example article</a>
+      <a href="./guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></details>
+      <div class="docs-component-heading"><div><p class="docs-eyebrow">A FEW SIMPLE STEPS</p><h1>Make yourself at home.</h1><p class="docs-lede">A component is one piece of HTML, with everything it needs inside.</p></div></div>
+    <div class="docs-prose">
+      <section aria-labelledby="quick-start"><h2 id="quick-start">From the collection to your page</h2><ol><li>Choose a component and open its <strong>Get HTML</strong> panel.</li><li>Focus the source field. Select all, then copy using your keyboard or your device’s selection menu. You can also download the HTML file.</li><li>Paste the entire snippet into an HTML page or an editor that preserves raw HTML, <code>&lt;style&gt;</code> elements, and <code>style</code> attributes.</li><li>Replace the demo text, destinations, and heading levels. Open your page and check its narrowest layout.</li></ol><p>There is no installation step, build command, framework, CDN, or shared component stylesheet. Open <code>index.html</code> from this documentation folder to browse locally, or serve the folder with any static web server.</p></section>
+      <section aria-labelledby="copying"><h2 id="copying">Copying, without a script</h2><p>HTML and CSS cannot write text to the system clipboard on a button click. This library keeps the no-JavaScript promise: <strong>Get HTML</strong> opens a native disclosure, the readonly field lets you select source, and the download link saves the same snippet.</p><p>On Windows or Linux, use <kbd>Ctrl</kbd> + <kbd>A</kbd>, then <kbd>Ctrl</kbd> + <kbd>C</kbd> inside the field. On macOS, use <kbd>⌘</kbd> + <kbd>A</kbd>, then <kbd>⌘</kbd> + <kbd>C</kbd>. On touch devices, use Select All and Copy. Download behavior depends on the browser and works best when the documentation is served over HTTP or HTTPS.</p></section>
+      <section aria-labelledby="embedding"><h2 id="embedding">What travels with a component</h2><p>Every component has a semantic outer element, essential inline styles, and an embedded <code>&lt;style&gt;</code> element as its first child. All embedded rules live in <code>@scope to ([data-bui]) { … }</code>, so they target that component and stop at nested component roots.</p><p>Inline styles keep the basic presentation readable when scoped CSS is unsupported. Scoped rules add responsive refinements and focus or hover styles. Keep the style element inside its original wrapper, before the component content. The current HTML standard permits body style elements under these constraints.</p><p>Scope limits outgoing selectors. It is not a shadow boundary: your page’s CSS, inherited properties, or declarations using <code>!important</code> can still influence a component. Test the actual page where you embed it. A nested component can inherit custom properties from its ancestors; set its own values when you want a different theme.</p><p>Sanitized Markdown, email clients, and some blog editors remove styles or raw HTML. Those environments are outside the supported embedding contract. Test your editor’s published output. Do not disable its security filters just to use a snippet.</p><p>A Content Security Policy that blocks inline styles also blocks this distribution format. Integrate it with your site’s existing style policy; do not weaken a strict production policy automatically. Sites that cannot permit inline styles need a separate stylesheet integration, which is outside this library’s copy-and-paste format.</p></section>
+      <section aria-labelledby="customization"><h2 id="customization">A small, useful palette</h2><p>Set supported variables directly on the outer element, alongside its existing inline declarations. Each component uses fallbacks, so no token file is required. For example:</p><pre><code>--bui-accent: #4338ca;
+--bui-text: #20242e;
+--bui-muted: #555d6d;
+--bui-surface: #ffffff;
+--bui-tint: #f6f4fc;
+--bui-border: #e3e3ec;</code></pre><p>Change foreground and background colors together and check contrast. Snippets use a light palette by default. The documentation’s <strong>Dark theme</strong> control changes the reading interface only; component previews keep their own colors. Theme selection applies to the current page and is not stored.</p><p>Change visible text in the markup, keep meaningful labels, and use links for navigation. Demo identities are fictional, and example.com destinations are placeholders to replace before publishing.</p></section>
+      <section aria-labelledby="compatibility"><h2 id="compatibility">Modern features, useful fallbacks</h2><table><caption>Feature and fallback behavior</caption><thead><tr><th scope="col">Feature</th><th scope="col">Use</th><th scope="col">Fallback</th></tr></thead><tbody><tr><th scope="row">Inline styles, Grid, Flexbox</th><td>Basic layout and appearance</td><td>The content keeps semantic HTML structure.</td></tr><tr><th scope="row">Implicit @scope</th><td>Local responsive and interactive styles</td><td>Inline base styles remain; enhanced states may use native browser styling.</td></tr><tr><th scope="row">details / summary</th><td>Accordions, source panels, mobile navigation</td><td>Native HTML behavior; no script is required.</td></tr><tr><th scope="row">:has()</th><td>The documentation theme control</td><td>The control is hidden and the default theme remains in browsers without support.</td></tr></tbody></table><p>The design targets modern browsers. Browser support and the body-style rules continue to evolve; older HTML validators may not understand implicit scoped styles. Review actual diagnostics rather than disabling validation wholesale. See <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">the HTML style element standard</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope">CSS scope documentation</a>, and <a href="https://www.w3.org/TR/clipboard-apis/">the Clipboard API specification</a>.</p></section>
+      <section aria-labelledby="accessibility"><h2 id="accessibility">Built for readers</h2><p>Native links and disclosures support keyboard use. Focus indicators remain visible, table headers describe their cells, and meaning does not rely on color alone. There is no required animation, autoplay, or custom keyboard model.</p><ul><li>Preserve <code>summary</code> as the first child inside each <code>details</code> element.</li><li>Match heading levels to your article’s outline.</li><li>Keep table captions and <code>scope</code> attributes when editing tables.</li><li>Keep meaningful link text and visible labels.</li><li>Test your final content with keyboard navigation, large text, and a screen reader.</li></ul><p>The initial fragments have no IDs and do not group disclosures by name, so you can paste the same fragment more than once. Give any IDs you add unique values.</p></section>
+      <section aria-labelledby="publishing"><h2 id="publishing">Publish the documentation</h2><p>The <code>docs/</code> folder is a complete static site. Upload it as the publish directory on a static host. It uses relative links and includes its snippet downloads, license, and stylesheet, so it also works below a repository path.</p><p>For GitHub Pages, after merging the PR, select <strong>Deploy from a branch</strong>, choose <strong>main</strong> and <strong>/docs</strong> in repository Pages settings. No deployment has been enabled automatically. The empty <code>.nojekyll</code> file keeps the site as ordinary static files.</p><p>Review <code>QUALITY.md</code> in the repository for the checks performed and the remaining browser coverage. Production readiness is specific to your browser targets, editor, policy, and final content.</p></section>
+    </div>
+      <footer class="docs-footer"><p>Small building blocks. Room for your ideas.</p><p>Block UI · <a href="./LICENSE">MIT licensed</a> · HTML &amp; CSS</p></footer>
+    </main>
+  </div>
+</body>
+</html>

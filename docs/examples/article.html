@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="See eight self-contained HTML and CSS components composed into a readable example blog article.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>An example article · Block UI</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="docs-shell">
+  <a class="docs-skip-link" href="#main">Skip to content</a>
+  <header class="docs-header">
+    <a class="docs-brand" href="../index.html" aria-label="Block UI home"><span class="docs-brand-mark" aria-hidden="true">b.</span><span>block<span class="docs-brand-light">ui</span></span></a>
+    <nav class="docs-topnav" aria-label="Main navigation">
+      <a href="../index.html#components">Components</a>
+      <a href="../guide.html">Guide</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="docs-theme"><input id="docs-dark" class="docs-theme-input" type="checkbox"><label class="docs-theme-label" for="docs-dark">Dark theme</label></div>
+  </header>
+  <div class="docs-layout">
+    <aside class="docs-sidebar"><nav aria-label="Documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html" class="is-active" aria-current="page">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></aside>
+    <main class="docs-main" id="main" tabindex="-1">
+      <details class="docs-mobile-nav"><summary>Browse documentation</summary><nav aria-label="Mobile documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html" class="is-active" aria-current="page">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></details>
+      <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Overview</a><span aria-hidden="true">/</span><span aria-current="page">Example article</span></nav><header class="docs-example-header"><p class="docs-eyebrow">THE EVERYDAY JOURNAL · FIELD NOTES</p><h1 class="docs-hero-title">Leave a little room<br>for the ordinary.</h1><p class="docs-lede">A composition of small components, a few good paragraphs, and enough space to let them breathe.</p></header><div class="docs-example-flow">
+      <div data-bui="badges" role="group" aria-label="Article labels" style="box-sizing:border-box;display:flex;max-inline-size:100%;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0;color:var(--bui-text,#20242e);font:400 1rem/1.5 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-badge { text-wrap: pretty; }
+      @media (forced-colors: active) {
+        .bui-badge { outline: 1px solid CanvasText; outline-offset: -1px; }
+      }
+    }
+  </style>
+  <!-- These labels are informative, not clickable filters. Edit their wording. -->
+  <span class="bui-badge" style="box-sizing:border-box;max-inline-size:100%;padding:.3rem .75rem;border:1px solid #ded5f3;border-radius:999px;background:var(--bui-tint,#f6f4fc);color:var(--bui-accent,#5a35cc);font-size:.8rem;font-weight:700;">Design notes</span>
+  <span class="bui-badge" style="box-sizing:border-box;max-inline-size:100%;padding:.3rem .75rem;border:1px solid #bedcc9;border-radius:999px;background:#edf8f1;color:#235b3c;font-size:.8rem;font-weight:700;">Updated</span>
+  <span class="bui-badge" style="box-sizing:border-box;max-inline-size:100%;padding:.3rem .75rem;border:1px solid var(--bui-border,#e3e3ec);border-radius:999px;background:var(--bui-surface,#fff);color:var(--bui-muted,#555d6d);font-size:.8rem;font-weight:650;">5 min read</span>
+</div>
+
+      <div class="docs-prose"><p>Some of the best things we make begin with noticing. The light on a familiar wall. A line in a book. A walk taken without a destination. None of them asks for a grand plan.</p><p>This page brings a handful of blocks together into an ordinary article. Each one carries its own styling; the surrounding page provides only the reading layout.</p></div>
+      <figure data-bui="quote" style="box-sizing:border-box;max-inline-size:42rem;margin:0;padding:clamp(1.5rem,5vw,2.5rem);border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-quote-text { text-wrap: pretty; }
+      @media (forced-colors: active) {
+        .bui-quote-mark { color: CanvasText; }
+      }
+    }
+  </style>
+  <span class="bui-quote-mark" aria-hidden="true" style="display:block;margin-block-end:.25rem;color:var(--bui-accent,#5a35cc);font:700 4rem/.9 Georgia,serif;">“</span>
+  <blockquote style="margin:0;">
+    <p class="bui-quote-text" style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.4rem,4vw,2rem);line-height:1.45;letter-spacing:-.025em;">The best pages give a good idea the space it needs to be understood.</p>
+  </blockquote>
+  <!-- This is original sample copy with fictional attribution; replace both. -->
+  <figcaption style="display:flex;align-items:center;gap:.75rem;margin-block-start:1.5rem;color:var(--bui-muted,#555d6d);font-size:.875rem;">
+    <span aria-hidden="true" style="display:inline-grid;inline-size:2.5rem;block-size:2.5rem;flex:0 0 auto;place-items:center;border-radius:50%;background:var(--bui-tint,#f6f4fc);color:var(--bui-accent,#5a35cc);font-weight:750;">AL</span>
+    <span><strong style="display:block;color:var(--bui-text,#20242e);font-weight:700;">Alex Lane</strong>Writer &amp; maker · Example attribution</span>
+  </figcaption>
+</figure>
+
+      <div class="docs-prose"><h2>Start where you are</h2><p>A useful page does not need many moving parts. Give it a clear heading, a comfortable measure, and a thought worth sharing. Add the next piece only when it helps the reader.</p></div>
+      <aside data-bui="callout" aria-label="A useful note" style="box-sizing:border-box;max-inline-size:42rem;margin:0;padding:clamp(1.25rem,4vw,1.75rem);border:1px solid var(--bui-border,#ded5f3);border-inline-start:.3rem solid var(--bui-accent,#5a35cc);border-radius:1rem;background:var(--bui-tint,#f6f4fc);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-callout-link:hover { text-decoration-thickness: .16em; }
+      .bui-callout-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        :scope { border-color: CanvasText; }
+      }
+    }
+  </style>
+  <p style="display:flex;align-items:center;gap:.65rem;margin:0 0 .5rem;font-weight:750;"><span aria-hidden="true" style="display:inline-grid;box-sizing:border-box;inline-size:1.65rem;block-size:1.65rem;flex:0 0 auto;place-items:center;border:1px solid currentColor;border-radius:50%;color:var(--bui-accent,#5a35cc);font-size:.85rem;line-height:1;">i</span>A useful note</p>
+  <p style="margin:0;color:var(--bui-muted,#555d6d);">Good defaults leave room for your voice. Change the words, keep the structure, and make this little corner of the web your own.</p>
+  <!-- Replace this example destination, or remove the optional link. -->
+  <a class="bui-callout-link" href="https://example.com/guide" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;margin-block-start:.5rem;color:var(--bui-accent,#5a35cc);font-weight:650;text-decoration:underline;text-underline-offset:.2em;">Read the guide <span aria-hidden="true" style="margin-inline-start:.4rem;">→</span></a>
+</aside>
+
+      <div class="docs-prose"><h2>Choose a shape for your story</h2><p>A short field note and a longer essay can both be generous. The format is there to serve the idea.</p></div>
+      <section data-bui="table" aria-label="Publishing checklist" style="box-sizing:border-box;max-inline-size:46rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-table-scroll:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: -4px; }
+      .bui-table-body > tr + tr { border-block-start: 1px solid var(--bui-border, #e3e3ec); }
+      .bui-table-body > tr:hover { background: var(--bui-tint, #f6f4fc); }
+      @media print {
+        .bui-table-scroll { overflow: visible !important; }
+        .bui-table { min-inline-size: 0 !important; }
+      }
+    }
+  </style>
+  <div class="bui-table-scroll" role="region" aria-label="Publishing checklist table; scroll horizontally on small screens" tabindex="0" style="max-inline-size:100%;overflow-x:auto;overscroll-behavior-inline:contain;">
+    <table class="bui-table" style="inline-size:100%;min-inline-size:30rem;border-collapse:collapse;text-align:start;font-size:.9rem;">
+      <caption style="padding:1.25rem 1.5rem;text-align:start;color:var(--bui-text,#20242e);font-size:1.1rem;font-weight:750;">Before you publish<span style="display:block;margin-block-start:.25rem;color:var(--bui-muted,#555d6d);font-size:.875rem;font-weight:400;">Three small checks for a thoughtful page.</span></caption>
+      <thead style="border-block:1px solid var(--bui-border,#e3e3ec);background:var(--bui-tint,#f6f4fc);">
+        <tr><th scope="col" style="padding:.85rem 1.5rem;font-weight:700;">Check</th><th scope="col" style="padding:.85rem 1rem;font-weight:700;">Why it matters</th><th scope="col" style="padding:.85rem 1.5rem;font-weight:700;">Status</th></tr>
+      </thead>
+      <tbody class="bui-table-body">
+        <tr><th scope="row" style="padding:1rem 1.5rem;font-weight:650;vertical-align:top;">Clear headings</th><td style="padding:1rem;vertical-align:top;color:var(--bui-muted,#555d6d);">Help readers find their place.</td><td style="padding:1rem 1.5rem;vertical-align:top;">Ready</td></tr>
+        <tr><th scope="row" style="padding:1rem 1.5rem;font-weight:650;vertical-align:top;">Useful links</th><td style="padding:1rem;vertical-align:top;color:var(--bui-muted,#555d6d);">Make the next step easy to follow.</td><td style="padding:1rem 1.5rem;vertical-align:top;">Ready</td></tr>
+        <tr><th scope="row" style="padding:1rem 1.5rem;font-weight:650;vertical-align:top;">Small screens</th><td style="padding:1rem;vertical-align:top;color:var(--bui-muted,#555d6d);">Keep the content within reach.</td><td style="padding:1rem 1.5rem;vertical-align:top;">Review</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin:0;padding:.75rem 1.5rem;border-block-start:1px solid var(--bui-border,#e3e3ec);color:var(--bui-muted,#555d6d);font-size:.8rem;">On a narrow screen, swipe the table or focus it and use the arrow keys.</p>
+</section>
+
+      <section data-bui="accordion" aria-label="Frequently asked questions" style="box-sizing:border-box;max-inline-size:42rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-accordion-item + .bui-accordion-item { border-block-start: 1px solid var(--bui-border, #e3e3ec); }
+      .bui-accordion-summary:hover { background: var(--bui-tint, #f6f4fc); }
+      .bui-accordion-summary:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: -5px; }
+      .bui-accordion-summary::marker { color: var(--bui-accent, #5a35cc); }
+      .bui-accordion-item[open] > .bui-accordion-summary { color: var(--bui-accent, #5a35cc); }
+      @media print {
+        .bui-accordion-item { break-inside: avoid; }
+      }
+    }
+  </style>
+  <h2 style="margin:0;padding:1.25rem 1.5rem;border-block-end:1px solid var(--bui-border,#e3e3ec);font-size:1.15rem;line-height:1.4;letter-spacing:-.02em;">A few good questions</h2>
+  <details class="bui-accordion-item" open>
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Does this need an installation?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">No. Paste the complete block into an HTML page. Its styles travel with it, and the browser handles opening and closing each answer.</p></div>
+  </details>
+  <details class="bui-accordion-item">
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Can I make it feel like my website?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">Absolutely. Edit the text and the CSS custom properties on this block. Keep text contrast strong and try the result on a narrow screen.</p></div>
+  </details>
+  <details class="bui-accordion-item">
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Can more than one answer stay open?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">Yes. Each disclosure works independently, so readers can compare answers without repeatedly opening and closing them.</p></div>
+  </details>
+</section>
+
+      <div class="docs-prose"><h2>Something for your next quiet morning</h2></div>
+      <article data-bui="article-card" style="box-sizing:border-box;max-inline-size:42rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      :scope { container-type: inline-size; }
+      .bui-article-layout { display: grid; }
+      .bui-article-art { display: grid; place-items: center; }
+      .bui-article-link:hover { text-decoration-thickness: .16em; }
+      .bui-article-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @container (min-width: 34rem) {
+        .bui-article-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); }
+      }
+      @media (forced-colors: active) {
+        .bui-article-art { border-block-end: 1px solid CanvasText; }
+      }
+    }
+  </style>
+  <div class="bui-article-layout">
+    <div class="bui-article-art" aria-hidden="true" style="box-sizing:border-box;min-block-size:12rem;padding:1.75rem;background:linear-gradient(145deg,#ece5ff,#f5f1ff 55%,#e4f3e9);">
+      <div style="box-sizing:border-box;max-inline-size:12rem;margin-inline:auto;padding:1.5rem;border:1px solid #c6b8ea;border-radius:.8rem;background:#fff;box-shadow:0 .5rem 0 -.2rem #d8ceef;">
+        <span style="display:block;inline-size:2.5rem;block-size:.4rem;margin-block-end:1.1rem;border-radius:1rem;background:#5a35cc;"></span>
+        <span style="display:block;font-size:1.8rem;line-height:1.1;font-weight:750;letter-spacing:-.06em;color:#342454;">Small ideas.<br>Lasting impact.</span>
+        <span style="display:block;inline-size:4rem;block-size:.25rem;margin-block-start:1.1rem;border-radius:1rem;background:#c6b8ea;"></span>
+      </div>
+    </div>
+    <div style="box-sizing:border-box;min-inline-size:0;padding:clamp(1.25rem,4vw,2rem);">
+      <p style="margin:0 0 .75rem;color:var(--bui-muted,#555d6d);font-size:.8rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;">Design journal · 5 min read</p>
+      <h2 style="margin:0 0 .75rem;font-size:clamp(1.5rem,4vw,1.9rem);font-weight:750;line-height:1.2;letter-spacing:-.035em;">Make room for the things that matter.</h2>
+      <p style="margin:0 0 1rem;color:var(--bui-muted,#555d6d);">A quieter approach to building thoughtful pages, one useful block at a time.</p>
+      <!-- Replace the example URL and link text before publishing. -->
+      <a class="bui-article-link" href="https://example.com/journal" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;gap:.6rem;color:var(--bui-accent,#5a35cc);font-weight:700;text-decoration:underline;text-underline-offset:.2em;">Read the story <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+
+      <div data-bui="link-button" style="box-sizing:border-box;max-inline-size:100%;margin:0;color:var(--bui-text,#20242e);font:400 1rem/1.5 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-link-button:hover { --bui-link-decoration: underline; text-underline-offset: .22em; }
+      .bui-link-button:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        .bui-link-button { outline: 1px solid ButtonText; }
+      }
+    }
+  </style>
+  <!-- This is navigation, so it is an anchor. Replace the example URL and text. -->
+  <a class="bui-link-button" href="https://example.com/guide" style="display:inline-flex;box-sizing:border-box;max-inline-size:100%;min-block-size:2.875rem;align-items:center;justify-content:center;gap:.75rem;padding:.75rem 1.25rem;border:1px solid transparent;border-radius:.8rem;background:var(--bui-accent,#5a35cc);color:var(--bui-on-accent,#fff);font-weight:700;line-height:1.4;text-align:center;text-decoration:var(--bui-link-decoration,none);"><span>Explore the guide</span><span aria-hidden="true" style="flex:0 0 auto;">→</span></a>
+</div>
+
+      <article data-bui="author-card" aria-label="About the author" style="box-sizing:border-box;max-inline-size:42rem;margin:0;padding:clamp(1.25rem,4vw,2rem);border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      :scope { container-type: inline-size; }
+      .bui-author-layout { display: grid; gap: 1rem; }
+      .bui-author-link:hover { text-decoration-thickness: .16em; }
+      .bui-author-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @container (min-width: 24rem) {
+        .bui-author-layout { grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1.25rem; }
+      }
+    }
+  </style>
+  <div class="bui-author-layout">
+    <span aria-hidden="true" style="display:inline-grid;box-sizing:border-box;inline-size:4rem;block-size:4rem;flex:0 0 auto;place-items:center;border:1px solid #ded5f3;border-radius:1.1rem;background:var(--bui-tint,#f6f4fc);color:var(--bui-accent,#5a35cc);font-size:1.35rem;font-weight:750;">JL</span>
+    <div style="min-inline-size:0;">
+      <p style="margin:0 0 .3rem;color:var(--bui-muted,#555d6d);font-size:.75rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;">Behind the words</p>
+      <h2 style="margin:0 0 .5rem;font-size:1.3rem;line-height:1.3;letter-spacing:-.025em;">Jamie Lee</h2>
+      <p style="margin:0;color:var(--bui-muted,#555d6d);">Writer, curious maker, and collector of small ideas. Sharing notes on designing a more thoughtful web.</p>
+      <!-- Replace the example author, biography, initials, and destination. -->
+      <a class="bui-author-link" href="https://example.com/about" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;gap:.4rem;margin-block-start:.5rem;color:var(--bui-accent,#5a35cc);font-size:.9rem;font-weight:650;text-decoration:underline;text-underline-offset:.2em;">More about Jamie <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+
+    </div><aside class="docs-notice">This is an example composition. Names and editorial content are fictional; external example links are placeholders. <a href="../index.html#components">Browse the individual components</a> to get their source.</aside>
+      <footer class="docs-footer"><p>Small building blocks. Room for your ideas.</p><p>Block UI · <a href="../LICENSE">MIT licensed</a> · HTML &amp; CSS</p></footer>
+    </main>
+  </div>
+</body>
+</html>

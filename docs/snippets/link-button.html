@@ -1,0 +1,13 @@
+<div data-bui="link-button" style="box-sizing:border-box;max-inline-size:100%;margin:0;color:var(--bui-text,#20242e);font:400 1rem/1.5 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-link-button:hover { --bui-link-decoration: underline; text-underline-offset: .22em; }
+      .bui-link-button:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        .bui-link-button { outline: 1px solid ButtonText; }
+      }
+    }
+  </style>
+  <!-- This is navigation, so it is an anchor. Replace the example URL and text. -->
+  <a class="bui-link-button" href="https://example.com/guide" style="display:inline-flex;box-sizing:border-box;max-inline-size:100%;min-block-size:2.875rem;align-items:center;justify-content:center;gap:.75rem;padding:.75rem 1.25rem;border:1px solid transparent;border-radius:.8rem;background:var(--bui-accent,#5a35cc);color:var(--bui-on-accent,#fff);font-weight:700;line-height:1.4;text-align:center;text-decoration:var(--bui-link-decoration,none);"><span>Explore the guide</span><span aria-hidden="true" style="flex:0 0 auto;">→</span></a>
+</div>

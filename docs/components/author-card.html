@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Author card: Introduce the author at the end of a post. Self-contained HTML and CSS, with preview, source, and download.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Author card · Block UI</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="docs-shell">
+  <a class="docs-skip-link" href="#main">Skip to content</a>
+  <header class="docs-header">
+    <a class="docs-brand" href="../index.html" aria-label="Block UI home"><span class="docs-brand-mark" aria-hidden="true">b.</span><span>block<span class="docs-brand-light">ui</span></span></a>
+    <nav class="docs-topnav" aria-label="Main navigation">
+      <a href="../index.html#components">Components</a>
+      <a href="../guide.html">Guide</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="docs-theme"><input id="docs-dark" class="docs-theme-input" type="checkbox"><label class="docs-theme-label" for="docs-dark">Dark theme</label></div>
+  </header>
+  <div class="docs-layout">
+    <aside class="docs-sidebar"><nav aria-label="Documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html" class="is-active" aria-current="page">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></aside>
+    <main class="docs-main" id="main" tabindex="-1">
+      <details class="docs-mobile-nav"><summary>Browse documentation</summary><nav aria-label="Mobile documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html" class="is-active" aria-current="page">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></details>
+      <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="../index.html#components">Components</a><span aria-hidden="true">/</span><span aria-current="page">Author card</span></nav>
+        <section class="docs-component" aria-labelledby="component-title">
+          <div class="docs-component-heading"><div><p class="docs-eyebrow">CONTENT</p><h1 id="component-title">Author card</h1><p class="docs-lede">Introduce the author at the end of a post.</p></div><span class="docs-pill">HTML + CSS</span></div>
+          <div class="docs-preview" role="group" aria-label="Author card preview"><article data-bui="author-card" aria-label="About the author" style="box-sizing:border-box;max-inline-size:42rem;margin:0;padding:clamp(1.25rem,4vw,2rem);border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      :scope { container-type: inline-size; }
+      .bui-author-layout { display: grid; gap: 1rem; }
+      .bui-author-link:hover { text-decoration-thickness: .16em; }
+      .bui-author-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @container (min-width: 24rem) {
+        .bui-author-layout { grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1.25rem; }
+      }
+    }
+  </style>
+  <div class="bui-author-layout">
+    <span aria-hidden="true" style="display:inline-grid;box-sizing:border-box;inline-size:4rem;block-size:4rem;flex:0 0 auto;place-items:center;border:1px solid #ded5f3;border-radius:1.1rem;background:var(--bui-tint,#f6f4fc);color:var(--bui-accent,#5a35cc);font-size:1.35rem;font-weight:750;">JL</span>
+    <div style="min-inline-size:0;">
+      <p style="margin:0 0 .3rem;color:var(--bui-muted,#555d6d);font-size:.75rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;">Behind the words</p>
+      <h2 style="margin:0 0 .5rem;font-size:1.3rem;line-height:1.3;letter-spacing:-.025em;">Jamie Lee</h2>
+      <p style="margin:0;color:var(--bui-muted,#555d6d);">Writer, curious maker, and collector of small ideas. Sharing notes on designing a more thoughtful web.</p>
+      <!-- Replace the example author, biography, initials, and destination. -->
+      <a class="bui-author-link" href="https://example.com/about" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;gap:.4rem;margin-block-start:.5rem;color:var(--bui-accent,#5a35cc);font-size:.9rem;font-weight:650;text-decoration:underline;text-underline-offset:.2em;">More about Jamie <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+</div>
+          <details class="docs-source"><summary>Get HTML <span class="docs-source-hint">Source &amp; download</span></summary><div class="docs-source-content">
+            <p id="copy-help">Click or focus the field below, select all with <kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>A</kbd>, then copy with <kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>C</kbd>. On touch devices, use the text selection menu. Opening this panel does not copy automatically.</p>
+            <label class="docs-source-label" for="component-source">Complete author card snippet</label>
+            <textarea id="component-source" class="docs-code" readonly rows="16" spellcheck="false" wrap="soft" aria-describedby="copy-help">&lt;article data-bui="author-card" aria-label="About the author" style="box-sizing:border-box;max-inline-size:42rem;margin:0;padding:clamp(1.25rem,4vw,2rem);border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;"&gt;
+  &lt;style&gt;
+    @scope to ([data-bui]) {
+      :scope { container-type: inline-size; }
+      .bui-author-layout { display: grid; gap: 1rem; }
+      .bui-author-link:hover { text-decoration-thickness: .16em; }
+      .bui-author-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @container (min-width: 24rem) {
+        .bui-author-layout { grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1.25rem; }
+      }
+    }
+  &lt;/style&gt;
+  &lt;div class="bui-author-layout"&gt;
+    &lt;span aria-hidden="true" style="display:inline-grid;box-sizing:border-box;inline-size:4rem;block-size:4rem;flex:0 0 auto;place-items:center;border:1px solid #ded5f3;border-radius:1.1rem;background:var(--bui-tint,#f6f4fc);color:var(--bui-accent,#5a35cc);font-size:1.35rem;font-weight:750;"&gt;JL&lt;/span&gt;
+    &lt;div style="min-inline-size:0;"&gt;
+      &lt;p style="margin:0 0 .3rem;color:var(--bui-muted,#555d6d);font-size:.75rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;"&gt;Behind the words&lt;/p&gt;
+      &lt;h2 style="margin:0 0 .5rem;font-size:1.3rem;line-height:1.3;letter-spacing:-.025em;"&gt;Jamie Lee&lt;/h2&gt;
+      &lt;p style="margin:0;color:var(--bui-muted,#555d6d);"&gt;Writer, curious maker, and collector of small ideas. Sharing notes on designing a more thoughtful web.&lt;/p&gt;
+      &lt;!-- Replace the example author, biography, initials, and destination. --&gt;
+      &lt;a class="bui-author-link" href="https://example.com/about" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;gap:.4rem;margin-block-start:.5rem;color:var(--bui-accent,#5a35cc);font-size:.9rem;font-weight:650;text-decoration:underline;text-underline-offset:.2em;"&gt;More about Jamie &lt;span aria-hidden="true"&gt;↗&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</textarea>
+            <div class="docs-source-actions"><a class="docs-button docs-button-secondary" href="../snippets/author-card.html" download="author-card.html">Download HTML <span aria-hidden="true">↓</span></a><a class="docs-text-link" href="https://github.com/gaomingzhao-system/block-ui-experimental/blob/main/components/author-card.html">View source on GitHub <span aria-hidden="true">↗</span></a></div>
+          </div></details>
+        </section>
+        <section class="docs-prose" aria-labelledby="customize-title"><h2 id="customize-title">Make it yours</h2><p>Replace the initials, name, description, and profile link. The demo identity is fictional.</p><p>Paste the complete outer element, including its first <code>&lt;style&gt;</code> child. The snippet has its own colors, spacing, type, and focus styles; it does not need this documentation site’s stylesheet.</p><p>Customize supported <code>--bui-*</code> variables on the outer element. Adjust the heading level to fit your document, and replace example links before publishing.</p><p><a href="../guide.html#embedding">Read the embedding notes</a> for editor support, CSS policies, nested components, and browser fallbacks.</p></section>
+        <nav class="docs-page-nav" aria-label="More components"><a href="./table.html"><span>Previous</span><strong>← Table</strong></a><a href="./article-card.html"><span>Next</span><strong>Article card →</strong></a></nav>
+      <footer class="docs-footer"><p>Small building blocks. Room for your ideas.</p><p>Block UI · <a href="../LICENSE">MIT licensed</a> · HTML &amp; CSS</p></footer>
+    </main>
+  </div>
+</body>
+</html>

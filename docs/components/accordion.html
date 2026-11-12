@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accordion: Let readers open just the details they need. Self-contained HTML and CSS, with preview, source, and download.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Accordion · Block UI</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="docs-shell">
+  <a class="docs-skip-link" href="#main">Skip to content</a>
+  <header class="docs-header">
+    <a class="docs-brand" href="../index.html" aria-label="Block UI home"><span class="docs-brand-mark" aria-hidden="true">b.</span><span>block<span class="docs-brand-light">ui</span></span></a>
+    <nav class="docs-topnav" aria-label="Main navigation">
+      <a href="../index.html#components">Components</a>
+      <a href="../guide.html">Guide</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="docs-theme"><input id="docs-dark" class="docs-theme-input" type="checkbox"><label class="docs-theme-label" for="docs-dark">Dark theme</label></div>
+  </header>
+  <div class="docs-layout">
+    <aside class="docs-sidebar"><nav aria-label="Documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html" class="is-active" aria-current="page">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></aside>
+    <main class="docs-main" id="main" tabindex="-1">
+      <details class="docs-mobile-nav"><summary>Browse documentation</summary><nav aria-label="Mobile documentation"><div class="docs-nav-group">
+      <p class="docs-nav-title">Start here</p>
+      <a href="../index.html">Overview</a>
+      <a href="../guide.html">Quick start</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Components <span aria-hidden="true">08</span></p>
+      <a href="../components/article-card.html">Article card</a><a href="../components/callout.html">Callout</a><a href="../components/quote.html">Quote</a><a href="../components/accordion.html" class="is-active" aria-current="page">Accordion</a><a href="../components/link-button.html">Link button</a><a href="../components/badges.html">Badges</a><a href="../components/table.html">Table</a><a href="../components/author-card.html">Author card</a>
+    </div>
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">Resources</p>
+      <a href="../examples/article.html">Example article</a>
+      <a href="../guide.html#compatibility">Browser support</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div></nav></details>
+      <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="../index.html#components">Components</a><span aria-hidden="true">/</span><span aria-current="page">Accordion</span></nav>
+        <section class="docs-component" aria-labelledby="component-title">
+          <div class="docs-component-heading"><div><p class="docs-eyebrow">INTERACTION</p><h1 id="component-title">Accordion</h1><p class="docs-lede">Let readers open just the details they need.</p></div><span class="docs-pill">HTML + CSS</span></div>
+          <div class="docs-preview" role="group" aria-label="Accordion preview"><section data-bui="accordion" aria-label="Frequently asked questions" style="box-sizing:border-box;max-inline-size:42rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      .bui-accordion-item + .bui-accordion-item { border-block-start: 1px solid var(--bui-border, #e3e3ec); }
+      .bui-accordion-summary:hover { background: var(--bui-tint, #f6f4fc); }
+      .bui-accordion-summary:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: -5px; }
+      .bui-accordion-summary::marker { color: var(--bui-accent, #5a35cc); }
+      .bui-accordion-item[open] > .bui-accordion-summary { color: var(--bui-accent, #5a35cc); }
+      @media print {
+        .bui-accordion-item { break-inside: avoid; }
+      }
+    }
+  </style>
+  <h2 style="margin:0;padding:1.25rem 1.5rem;border-block-end:1px solid var(--bui-border,#e3e3ec);font-size:1.15rem;line-height:1.4;letter-spacing:-.02em;">A few good questions</h2>
+  <details class="bui-accordion-item" open>
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Does this need an installation?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">No. Paste the complete block into an HTML page. Its styles travel with it, and the browser handles opening and closing each answer.</p></div>
+  </details>
+  <details class="bui-accordion-item">
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Can I make it feel like my website?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">Absolutely. Edit the text and the CSS custom properties on this block. Keep text contrast strong and try the result on a narrow screen.</p></div>
+  </details>
+  <details class="bui-accordion-item">
+    <summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;">Can more than one answer stay open?</summary>
+    <div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"><p style="margin:0;">Yes. Each disclosure works independently, so readers can compare answers without repeatedly opening and closing them.</p></div>
+  </details>
+</section>
+</div>
+          <details class="docs-source"><summary>Get HTML <span class="docs-source-hint">Source &amp; download</span></summary><div class="docs-source-content">
+            <p id="copy-help">Click or focus the field below, select all with <kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>A</kbd>, then copy with <kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>C</kbd>. On touch devices, use the text selection menu. Opening this panel does not copy automatically.</p>
+            <label class="docs-source-label" for="component-source">Complete accordion snippet</label>
+            <textarea id="component-source" class="docs-code" readonly rows="16" spellcheck="false" wrap="soft" aria-describedby="copy-help">&lt;section data-bui="accordion" aria-label="Frequently asked questions" style="box-sizing:border-box;max-inline-size:42rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;"&gt;
+  &lt;style&gt;
+    @scope to ([data-bui]) {
+      .bui-accordion-item + .bui-accordion-item { border-block-start: 1px solid var(--bui-border, #e3e3ec); }
+      .bui-accordion-summary:hover { background: var(--bui-tint, #f6f4fc); }
+      .bui-accordion-summary:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: -5px; }
+      .bui-accordion-summary::marker { color: var(--bui-accent, #5a35cc); }
+      .bui-accordion-item[open] &gt; .bui-accordion-summary { color: var(--bui-accent, #5a35cc); }
+      @media print {
+        .bui-accordion-item { break-inside: avoid; }
+      }
+    }
+  &lt;/style&gt;
+  &lt;h2 style="margin:0;padding:1.25rem 1.5rem;border-block-end:1px solid var(--bui-border,#e3e3ec);font-size:1.15rem;line-height:1.4;letter-spacing:-.02em;"&gt;A few good questions&lt;/h2&gt;
+  &lt;details class="bui-accordion-item" open&gt;
+    &lt;summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;"&gt;Does this need an installation?&lt;/summary&gt;
+    &lt;div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"&gt;&lt;p style="margin:0;"&gt;No. Paste the complete block into an HTML page. Its styles travel with it, and the browser handles opening and closing each answer.&lt;/p&gt;&lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class="bui-accordion-item"&gt;
+    &lt;summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;"&gt;Can I make it feel like my website?&lt;/summary&gt;
+    &lt;div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"&gt;&lt;p style="margin:0;"&gt;Absolutely. Edit the text and the CSS custom properties on this block. Keep text contrast strong and try the result on a narrow screen.&lt;/p&gt;&lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class="bui-accordion-item"&gt;
+    &lt;summary class="bui-accordion-summary" style="box-sizing:border-box;min-block-size:3.5rem;padding:1rem 1.5rem;cursor:pointer;font-weight:700;"&gt;Can more than one answer stay open?&lt;/summary&gt;
+    &lt;div style="padding:0 1.5rem 1.25rem;color:var(--bui-muted,#555d6d);"&gt;&lt;p style="margin:0;"&gt;Yes. Each disclosure works independently, so readers can compare answers without repeatedly opening and closing them.&lt;/p&gt;&lt;/div&gt;
+  &lt;/details&gt;
+&lt;/section&gt;
+</textarea>
+            <div class="docs-source-actions"><a class="docs-button docs-button-secondary" href="../snippets/accordion.html" download="accordion.html">Download HTML <span aria-hidden="true">↓</span></a><a class="docs-text-link" href="https://github.com/gaomingzhao-system/block-ui-experimental/blob/main/components/accordion.html">View source on GitHub <span aria-hidden="true">↗</span></a></div>
+          </div></details>
+        </section>
+        <section class="docs-prose" aria-labelledby="customize-title"><h2 id="customize-title">Make it yours</h2><p>Edit the questions and answers. Each disclosure is independent, so repeated snippets do not close one another.</p><p>Paste the complete outer element, including its first <code>&lt;style&gt;</code> child. The snippet has its own colors, spacing, type, and focus styles; it does not need this documentation site’s stylesheet.</p><p>Customize supported <code>--bui-*</code> variables on the outer element. Adjust the heading level to fit your document, and replace example links before publishing.</p><p><a href="../guide.html#embedding">Read the embedding notes</a> for editor support, CSS policies, nested components, and browser fallbacks.</p></section>
+        <nav class="docs-page-nav" aria-label="More components"><a href="./quote.html"><span>Previous</span><strong>← Quote</strong></a><a href="./link-button.html"><span>Next</span><strong>Link button →</strong></a></nav>
+      <footer class="docs-footer"><p>Small building blocks. Room for your ideas.</p><p>Block UI · <a href="../LICENSE">MIT licensed</a> · HTML &amp; CSS</p></footer>
+    </main>
+  </div>
+</body>
+</html>

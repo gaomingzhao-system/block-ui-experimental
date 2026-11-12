@@ -1,0 +1,55 @@
+name: Static source checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Read the public repository at the event commit
+        env:
+          REPOSITORY_URL: https://github.com/gaomingzhao-system/block-ui-experimental.git
+        run: |
+          git init .
+          git remote add origin "$REPOSITORY_URL"
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+
+      - name: Check the eight downloadable snippets and license
+        run: |
+          test "$(find components -maxdepth 1 -name '*.html' -type f | wc -l)" -eq 8
+          diff -qr components docs/snippets
+          cmp LICENSE docs/LICENSE
+          test -f docs/.nojekyll
+          for component in components/*.html; do
+            name="$(basename "$component")"
+            test -f "docs/components/$name"
+            grep -q 'data-bui=' "$component"
+            grep -q '@scope to (\[data-bui\])' "$component"
+          done
+
+      - name: Keep the site free of scripts and remote style dependencies
+        run: |
+          if git ls-files | grep -Ei '\.(js|jsx|mjs|cjs|ts|tsx)$'; then
+            echo 'JavaScript and TypeScript files are outside this project contract.'
+            exit 1
+          fi
+          if grep -ERni --include='*.html' '<script([[:space:]>])|[[:space:]]on[[:alpha:]]+[[:space:]]*=|javascript:' components docs; then
+            echo 'Executable script markup is outside this project contract.'
+            exit 1
+          fi
+          if grep -ERni --include='*.html' --include='*.css' '@import|url[[:space:]]*\(' components docs; then
+            echo 'Components and documentation must not require imported styles or URL assets.'
+            exit 1
+          fi
+
+      - name: Check patch whitespace
+        run: git show --format= --check HEAD

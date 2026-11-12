@@ -1,0 +1,33 @@
+<article data-bui="article-card" style="box-sizing:border-box;max-inline-size:42rem;margin:0;overflow:hidden;border:1px solid var(--bui-border,#e3e3ec);border-radius:1.25rem;background:var(--bui-surface,#fff);color:var(--bui-text,#20242e);font:400 1rem/1.6 var(--bui-font,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif);overflow-wrap:anywhere;color-scheme:light;">
+  <style>
+    @scope to ([data-bui]) {
+      :scope { container-type: inline-size; }
+      .bui-article-layout { display: grid; }
+      .bui-article-art { display: grid; place-items: center; }
+      .bui-article-link:hover { text-decoration-thickness: .16em; }
+      .bui-article-link:focus-visible { outline: 3px solid var(--bui-accent, #5a35cc); outline-offset: 4px; }
+      @container (min-width: 34rem) {
+        .bui-article-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); }
+      }
+      @media (forced-colors: active) {
+        .bui-article-art { border-block-end: 1px solid CanvasText; }
+      }
+    }
+  </style>
+  <div class="bui-article-layout">
+    <div class="bui-article-art" aria-hidden="true" style="box-sizing:border-box;min-block-size:12rem;padding:1.75rem;background:linear-gradient(145deg,#ece5ff,#f5f1ff 55%,#e4f3e9);">
+      <div style="box-sizing:border-box;max-inline-size:12rem;margin-inline:auto;padding:1.5rem;border:1px solid #c6b8ea;border-radius:.8rem;background:#fff;box-shadow:0 .5rem 0 -.2rem #d8ceef;">
+        <span style="display:block;inline-size:2.5rem;block-size:.4rem;margin-block-end:1.1rem;border-radius:1rem;background:#5a35cc;"></span>
+        <span style="display:block;font-size:1.8rem;line-height:1.1;font-weight:750;letter-spacing:-.06em;color:#342454;">Small ideas.<br>Lasting impact.</span>
+        <span style="display:block;inline-size:4rem;block-size:.25rem;margin-block-start:1.1rem;border-radius:1rem;background:#c6b8ea;"></span>
+      </div>
+    </div>
+    <div style="box-sizing:border-box;min-inline-size:0;padding:clamp(1.25rem,4vw,2rem);">
+      <p style="margin:0 0 .75rem;color:var(--bui-muted,#555d6d);font-size:.8rem;font-weight:650;letter-spacing:.08em;text-transform:uppercase;">Design journal · 5 min read</p>
+      <h2 style="margin:0 0 .75rem;font-size:clamp(1.5rem,4vw,1.9rem);font-weight:750;line-height:1.2;letter-spacing:-.035em;">Make room for the things that matter.</h2>
+      <p style="margin:0 0 1rem;color:var(--bui-muted,#555d6d);">A quieter approach to building thoughtful pages, one useful block at a time.</p>
+      <!-- Replace the example URL and link text before publishing. -->
+      <a class="bui-article-link" href="https://example.com/journal" style="display:inline-flex;box-sizing:border-box;min-block-size:2.75rem;align-items:center;gap:.6rem;color:var(--bui-accent,#5a35cc);font-weight:700;text-decoration:underline;text-underline-offset:.2em;">Read the story <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
