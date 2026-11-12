@@ -1,0 +1,13 @@
+<div role="group" aria-label="Avatar sizes">
+  <style>
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font: 650 1rem/1 system-ui, sans-serif; }
+      :scope > span { box-sizing: border-box; display: inline-grid; flex: 0 0 auto; place-items: center; inline-size: 3rem; block-size: 3rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 50%; background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); font: inherit; }
+      :scope > span[data-size="small"] { inline-size: 2rem; block-size: 2rem; font-size: .75rem; }
+      :scope > span[data-size="large"] { inline-size: 4rem; block-size: 4rem; font-size: 1.25rem; }
+    }
+  </style>
+  <span role="img" aria-label="Alex Morgan, small avatar" data-size="small">AM</span>
+  <span role="img" aria-label="Alex Morgan, medium avatar">AM</span>
+  <span role="img" aria-label="Alex Morgan, large avatar" data-size="large">AM</span>
+</div>

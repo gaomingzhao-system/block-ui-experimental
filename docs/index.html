@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A compact library of 14 self-contained HTML and CSS components for interfaces, pages, and blogs. No installation, no JavaScript, and no external dependencies.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Block UI — Small blocks. Better interfaces.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="docs-skip" href="#main">Skip to content</a>
+  <header class="docs-topbar">
+    <a class="docs-brand" href="#main" aria-label="Block UI home">
+      <span class="docs-brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      block ui<span class="docs-tag">HTML + CSS</span>
+    </a>
+    <nav class="docs-topnav" aria-label="Main navigation">
+      <a href="#components">Components</a>
+      <a href="#getting-started">Guide</a>
+      <a href="https://github.com/gaomingzhao-system/block-ui-experimental">GitHub <span aria-hidden="true">↗</span></a>
+      <label class="docs-theme"><input id="dark-mode" type="checkbox">Dark theme</label>
+    </nav>
+  </header>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" aria-label="Documentation sidebar">
+      <nav aria-label="Documentation">
+        <p class="docs-nav-label">Start here</p>
+        <ul class="docs-nav-list">
+          <li><a class="docs-nav-featured" href="#components">All components <span class="docs-nav-count">14</span></a></li>
+          <li><a href="#getting-started">Getting started</a></li>
+          <li><a href="#vue">Using with Vue</a></li>
+          <li><a href="#customize">Make it yours</a></li>
+        </ul>
+        <p class="docs-nav-label">Essentials</p><ul class="docs-nav-list"><li><a href="#button">Button</a></li><li><a href="#avatar">Avatar</a></li><li><a href="#badge">Badge</a></li></ul>
+<p class="docs-nav-label">Form controls</p><ul class="docs-nav-list"><li><a href="#text-field">Text field</a></li><li><a href="#selection-control">Checkbox &amp; switch</a></li></ul>
+<p class="docs-nav-label">Interaction</p><ul class="docs-nav-list"><li><a href="#carousel">Carousel</a></li><li><a href="#accordion">FAQ</a></li></ul>
+<p class="docs-nav-label">Content</p><ul class="docs-nav-list"><li><a href="#article-card">Article card</a></li><li><a href="#callout">Callout</a></li><li><a href="#quote">Quote</a></li><li><a href="#table">Comparison table</a></li></ul>
+<p class="docs-nav-label">Page sections</p><ul class="docs-nav-list"><li><a href="#author-card">Author card</a></li><li><a href="#steps">Steps</a></li><li><a href="#cta">Call to action</a></li></ul>
+        <p class="docs-nav-label">Good to know</p>
+        <ul class="docs-nav-list">
+          <li><a href="#copying">Copying source</a></li>
+          <li><a href="#browser-support">Browser support</a></li>
+        </ul>
+      </nav>
+      <p class="docs-sidebar-note"><strong>A little HTML. A lot of possibility.</strong>Built for the pages you write. Free to use, change, and make your own.</p>
+    </aside>
+    <main id="main" class="docs-main" tabindex="-1">
+      <details class="docs-mobile-nav">
+        <summary>Browse the collection</summary>
+        <nav aria-label="Mobile component navigation"><ul class="docs-nav-list"><li><a href="#button">Button</a></li>
+<li><a href="#avatar">Avatar</a></li>
+<li><a href="#badge">Badge</a></li>
+<li><a href="#text-field">Text field</a></li>
+<li><a href="#selection-control">Checkbox &amp; switch</a></li>
+<li><a href="#carousel">Carousel</a></li>
+<li><a href="#accordion">FAQ</a></li>
+<li><a href="#article-card">Article card</a></li>
+<li><a href="#callout">Callout</a></li>
+<li><a href="#quote">Quote</a></li>
+<li><a href="#table">Comparison table</a></li>
+<li><a href="#author-card">Author card</a></li>
+<li><a href="#steps">Steps</a></li>
+<li><a href="#cta">Call to action</a></li></ul></nav>
+      </details>
+      <section class="docs-hero" aria-labelledby="hero-title">
+        <div>
+          <p class="docs-eyebrow">Small by design</p>
+          <h1 id="hero-title">Small blocks.<br><span>Better interfaces.</span></h1>
+          <p class="docs-hero-description">The UI essentials, plus thoughtful blocks for pages and blogs. Take the HTML, make it yours, and keep building.</p>
+          <div class="docs-actions">
+            <a class="docs-button docs-button-primary" href="#components">Explore the blocks <span aria-hidden="true">↓</span></a>
+            <a class="docs-button" href="#getting-started">How it works <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="docs-meta"><span>14 focused components</span><span>Zero dependencies</span><span>MIT licensed</span></p>
+        </div>
+        <div class="docs-hero-sample" role="group" aria-label="Example of a block carrying its own style">
+          <div class="docs-sample-bar"><span>One block. Everything included.</span><span aria-hidden="true">↗</span></div>
+          <div class="docs-sample-live"><p>Your next good idea</p><strong>Give your words a place to land.</strong><small>A little structure makes room for a better story.</small></div>
+          <pre class="docs-sample-code"><code><span>&lt;article&gt;</span>
+  &lt;style&gt;
+    @scope { /* your styles */ }
+  &lt;/style&gt;
+  &lt;h2&gt;Your next good idea&lt;/h2&gt;
+<span>&lt;/article&gt;</span></code></pre>
+        </div>
+      </section>
+      <section id="getting-started" class="docs-start" aria-labelledby="start-title">
+        <div class="docs-section-heading"><h2 id="start-title">A smaller way to build.</h2><p>No setup. No package manager.</p></div>
+        <div class="docs-guide-grid">
+          <article class="docs-guide"><span class="docs-guide-number" aria-hidden="true">01</span><h3>Find your block</h3><p>Browse the live previews. Each block is a complete, independent fragment.</p></article>
+          <article class="docs-guide"><span class="docs-guide-number" aria-hidden="true">02</span><h3>Take the HTML</h3><p>Open Get HTML and copy the source, or download the fragment. Its styles come with it.</p></article>
+          <article class="docs-guide"><span class="docs-guide-number" aria-hidden="true">03</span><h3>Make it yours</h3><p>Paste into your page, edit the words and links, and choose your colors. That is the whole setup.</p></article>
+        </div>
+        <p class="docs-copy-note"><strong>Pure HTML + CSS, including this site.</strong>Source uses your browser’s normal copy command. <a href="#copying">About copying →</a></p>
+      </section>
+      <section id="components" aria-labelledby="components-title">
+        <div class="docs-section-heading"><h2 id="components-title">The collection</h2><p>14 core components. Variants kept together.</p></div>
+        <nav class="docs-category-nav" aria-label="Jump to a component group">
+          <a href="#button">Essentials</a><a href="#text-field">Form controls</a><a href="#carousel">Interaction</a><a href="#article-card">Content</a><a href="#author-card">Page sections</a>
+        </nav>
+        <div class="docs-blocks">
+          <section id="button" class="docs-block" aria-labelledby="title-button">
+            <div class="docs-block-heading">
+              <div><h3 id="title-button"><span class="docs-block-number">01</span>Button</h3><p>Four useful styles. One native button element.</p></div>
+              <span class="docs-tag">Essentials</span>
+            </div>
+            <div class="docs-stage" data-component="button">
+<div role="group" aria-label="Button styles">
+  <style>
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font: 400 .875rem/1.5 system-ui, sans-serif; }
+      :scope > button { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-block-size: 2.75rem; max-inline-size: 100%; padding: .625rem 1rem; border: 1px solid var(--bui-primary, #5943d6); border-radius: .625rem; background: var(--bui-primary, #5943d6); color: var(--bui-primary-text, #fff); font: inherit; font-weight: 650; text-align: center; overflow-wrap: anywhere; cursor: pointer; }
+      :scope > button[data-variant="outline"] { background: var(--bui-surface, #fff); color: var(--bui-primary, #5943d6); }
+      :scope > button[data-variant="ghost"] { border-color: transparent; background: transparent; color: var(--bui-primary, #5943d6); }
+      :scope > button:not(:disabled):hover { text-decoration: underline; text-underline-offset: .2em; }
+      :scope > button:not(:disabled):active { box-shadow: inset 0 0 0 2px currentColor; }
+      :scope > button:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope > button:disabled { border-color: var(--bui-border, #e4e2eb); background: var(--bui-tint, #f1edff); color: var(--bui-muted, #585c70); cursor: not-allowed; }
+      @media (forced-colors: active) {
+        :scope > button { border-color: ButtonText; }
+        :scope > button:disabled { border-color: GrayText; color: GrayText; }
+      }
+    }
+  </style>
+  <button type="button">Primary</button>
+  <button type="button" data-variant="outline">Outline</button>
+  <button type="button" data-variant="ghost">Ghost</button>
+  <button type="button" disabled>Disabled</button>
+</div>
+</div>
+            <p class="docs-usage">These are styling examples. Keep the variants you need and set the appropriate native button type for your form action.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-button">Button source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%20role%3D%22group%22%20aria-label%3D%22Button%20styles%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20center%3B%20gap%3A%20.75rem%3B%20font%3A%20400%20.875rem%2F1.5%20system-ui%2C%20sans-serif%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20justify-content%3A%20center%3B%20min-block-size%3A%202.75rem%3B%20max-inline-size%3A%20100%25%3B%20padding%3A%20.625rem%201rem%3B%20border%3A%201px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20border-radius%3A%20.625rem%3B%20background%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20color%3A%20var%28--bui-primary-text%2C%20%23fff%29%3B%20font%3A%20inherit%3B%20font-weight%3A%20650%3B%20text-align%3A%20center%3B%20overflow-wrap%3A%20anywhere%3B%20cursor%3A%20pointer%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%5Bdata-variant%3D%22outline%22%5D%20%7B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%5Bdata-variant%3D%22ghost%22%5D%20%7B%20border-color%3A%20transparent%3B%20background%3A%20transparent%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%3Anot%28%3Adisabled%29%3Ahover%20%7B%20text-decoration%3A%20underline%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%3Anot%28%3Adisabled%29%3Aactive%20%7B%20box-shadow%3A%20inset%200%200%200%202px%20currentColor%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20button%3Adisabled%20%7B%20border-color%3A%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20cursor%3A%20not-allowed%3B%20%7D%0A%20%20%20%20%20%20%40media%20%28forced-colors%3A%20active%29%20%7B%0A%20%20%20%20%20%20%20%20%3Ascope%20%3E%20button%20%7B%20border-color%3A%20ButtonText%3B%20%7D%0A%20%20%20%20%20%20%20%20%3Ascope%20%3E%20button%3Adisabled%20%7B%20border-color%3A%20GrayText%3B%20color%3A%20GrayText%3B%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cbutton%20type%3D%22button%22%3EPrimary%3C%2Fbutton%3E%0A%20%20%3Cbutton%20type%3D%22button%22%20data-variant%3D%22outline%22%3EOutline%3C%2Fbutton%3E%0A%20%20%3Cbutton%20type%3D%22button%22%20data-variant%3D%22ghost%22%3EGhost%3C%2Fbutton%3E%0A%20%20%3Cbutton%20type%3D%22button%22%20disabled%3EDisabled%3C%2Fbutton%3E%0A%3C%2Fdiv%3E%0A" download="button.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-button" aria-describedby="help-button" readonly spellcheck="false" wrap="off" rows="14">&lt;div role="group" aria-label="Button styles"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font: 400 .875rem/1.5 system-ui, sans-serif; }
+      :scope &gt; button { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-block-size: 2.75rem; max-inline-size: 100%; padding: .625rem 1rem; border: 1px solid var(--bui-primary, #5943d6); border-radius: .625rem; background: var(--bui-primary, #5943d6); color: var(--bui-primary-text, #fff); font: inherit; font-weight: 650; text-align: center; overflow-wrap: anywhere; cursor: pointer; }
+      :scope &gt; button[data-variant="outline"] { background: var(--bui-surface, #fff); color: var(--bui-primary, #5943d6); }
+      :scope &gt; button[data-variant="ghost"] { border-color: transparent; background: transparent; color: var(--bui-primary, #5943d6); }
+      :scope &gt; button:not(:disabled):hover { text-decoration: underline; text-underline-offset: .2em; }
+      :scope &gt; button:not(:disabled):active { box-shadow: inset 0 0 0 2px currentColor; }
+      :scope &gt; button:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope &gt; button:disabled { border-color: var(--bui-border, #e4e2eb); background: var(--bui-tint, #f1edff); color: var(--bui-muted, #585c70); cursor: not-allowed; }
+      @media (forced-colors: active) {
+        :scope &gt; button { border-color: ButtonText; }
+        :scope &gt; button:disabled { border-color: GrayText; color: GrayText; }
+      }
+    }
+  &lt;/style&gt;
+  &lt;button type="button"&gt;Primary&lt;/button&gt;
+  &lt;button type="button" data-variant="outline"&gt;Outline&lt;/button&gt;
+  &lt;button type="button" data-variant="ghost"&gt;Ghost&lt;/button&gt;
+  &lt;button type="button" disabled&gt;Disabled&lt;/button&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-button" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="avatar" class="docs-block" aria-labelledby="title-avatar">
+            <div class="docs-block-heading">
+              <div><h3 id="title-avatar"><span class="docs-block-number">02</span>Avatar</h3><p>A compact identity mark in three sizes.</p></div>
+              <span class="docs-tag">Essentials</span>
+            </div>
+            <div class="docs-stage" data-component="avatar">
+<div role="group" aria-label="Avatar sizes">
+  <style>
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font: 650 1rem/1 system-ui, sans-serif; }
+      :scope > span { box-sizing: border-box; display: inline-grid; flex: 0 0 auto; place-items: center; inline-size: 3rem; block-size: 3rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 50%; background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); font: inherit; }
+      :scope > span[data-size="small"] { inline-size: 2rem; block-size: 2rem; font-size: .75rem; }
+      :scope > span[data-size="large"] { inline-size: 4rem; block-size: 4rem; font-size: 1.25rem; }
+    }
+  </style>
+  <span role="img" aria-label="Alex Morgan, small avatar" data-size="small">AM</span>
+  <span role="img" aria-label="Alex Morgan, medium avatar">AM</span>
+  <span role="img" aria-label="Alex Morgan, large avatar" data-size="large">AM</span>
+</div>
+</div>
+            <p class="docs-usage">Three sizes in one family. Edit both the visible initials and the accessible name when changing the person.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-avatar">Avatar source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%20role%3D%22group%22%20aria-label%3D%22Avatar%20sizes%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20center%3B%20gap%3A%20.75rem%3B%20font%3A%20650%201rem%2F1%20system-ui%2C%20sans-serif%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20inline-grid%3B%20flex%3A%200%200%20auto%3B%20place-items%3A%20center%3B%20inline-size%3A%203rem%3B%20block-size%3A%203rem%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%2050%25%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font%3A%20inherit%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%5Bdata-size%3D%22small%22%5D%20%7B%20inline-size%3A%202rem%3B%20block-size%3A%202rem%3B%20font-size%3A%20.75rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%5Bdata-size%3D%22large%22%5D%20%7B%20inline-size%3A%204rem%3B%20block-size%3A%204rem%3B%20font-size%3A%201.25rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cspan%20role%3D%22img%22%20aria-label%3D%22Alex%20Morgan%2C%20small%20avatar%22%20data-size%3D%22small%22%3EAM%3C%2Fspan%3E%0A%20%20%3Cspan%20role%3D%22img%22%20aria-label%3D%22Alex%20Morgan%2C%20medium%20avatar%22%3EAM%3C%2Fspan%3E%0A%20%20%3Cspan%20role%3D%22img%22%20aria-label%3D%22Alex%20Morgan%2C%20large%20avatar%22%20data-size%3D%22large%22%3EAM%3C%2Fspan%3E%0A%3C%2Fdiv%3E%0A" download="avatar.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-avatar" aria-describedby="help-avatar" readonly spellcheck="false" wrap="off" rows="14">&lt;div role="group" aria-label="Avatar sizes"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; font: 650 1rem/1 system-ui, sans-serif; }
+      :scope &gt; span { box-sizing: border-box; display: inline-grid; flex: 0 0 auto; place-items: center; inline-size: 3rem; block-size: 3rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 50%; background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); font: inherit; }
+      :scope &gt; span[data-size="small"] { inline-size: 2rem; block-size: 2rem; font-size: .75rem; }
+      :scope &gt; span[data-size="large"] { inline-size: 4rem; block-size: 4rem; font-size: 1.25rem; }
+    }
+  &lt;/style&gt;
+  &lt;span role="img" aria-label="Alex Morgan, small avatar" data-size="small"&gt;AM&lt;/span&gt;
+  &lt;span role="img" aria-label="Alex Morgan, medium avatar"&gt;AM&lt;/span&gt;
+  &lt;span role="img" aria-label="Alex Morgan, large avatar" data-size="large"&gt;AM&lt;/span&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-avatar" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="badge" class="docs-block" aria-labelledby="title-badge">
+            <div class="docs-block-heading">
+              <div><h3 id="title-badge"><span class="docs-block-number">03</span>Badge</h3><p>Small labels for status, categories, and updates.</p></div>
+              <span class="docs-tag">Essentials</span>
+            </div>
+            <div class="docs-stage" data-component="badge">
+<div role="group" aria-label="Badge styles">
+  <style>
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font: 650 .75rem/1.5 system-ui, sans-serif; }
+      :scope > span { box-sizing: border-box; display: inline-flex; align-items: center; max-inline-size: 100%; padding: .2rem .65rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 100px; background: var(--bui-surface, #fff); color: var(--bui-muted, #585c70); overflow-wrap: anywhere; }
+      :scope > span[data-tone="primary"] { border-color: var(--bui-primary, #5943d6); background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); }
+      :scope > span[data-tone="success"] { border-color: #b9dbc8; background: #e8f5ed; color: #166047; }
+      @media (forced-colors: active) { :scope > span { border-color: CanvasText; } }
+    }
+  </style>
+  <span>Draft</span>
+  <span data-tone="primary">New</span>
+  <span data-tone="success">Published</span>
+</div>
+</div>
+            <p class="docs-usage">Neutral, primary, and success appearances. Keep the text meaningful when changing the status.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-badge">Badge source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%20role%3D%22group%22%20aria-label%3D%22Badge%20styles%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20center%3B%20gap%3A%20.5rem%3B%20font%3A%20650%20.75rem%2F1.5%20system-ui%2C%20sans-serif%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20max-inline-size%3A%20100%25%3B%20padding%3A%20.2rem%20.65rem%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%20100px%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%5Bdata-tone%3D%22primary%22%5D%20%7B%20border-color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%5Bdata-tone%3D%22success%22%5D%20%7B%20border-color%3A%20%23b9dbc8%3B%20background%3A%20%23e8f5ed%3B%20color%3A%20%23166047%3B%20%7D%0A%20%20%20%20%20%20%40media%20%28forced-colors%3A%20active%29%20%7B%20%3Ascope%20%3E%20span%20%7B%20border-color%3A%20CanvasText%3B%20%7D%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cspan%3EDraft%3C%2Fspan%3E%0A%20%20%3Cspan%20data-tone%3D%22primary%22%3ENew%3C%2Fspan%3E%0A%20%20%3Cspan%20data-tone%3D%22success%22%3EPublished%3C%2Fspan%3E%0A%3C%2Fdiv%3E%0A" download="badge.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-badge" aria-describedby="help-badge" readonly spellcheck="false" wrap="off" rows="14">&lt;div role="group" aria-label="Badge styles"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font: 650 .75rem/1.5 system-ui, sans-serif; }
+      :scope &gt; span { box-sizing: border-box; display: inline-flex; align-items: center; max-inline-size: 100%; padding: .2rem .65rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 100px; background: var(--bui-surface, #fff); color: var(--bui-muted, #585c70); overflow-wrap: anywhere; }
+      :scope &gt; span[data-tone="primary"] { border-color: var(--bui-primary, #5943d6); background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); }
+      :scope &gt; span[data-tone="success"] { border-color: #b9dbc8; background: #e8f5ed; color: #166047; }
+      @media (forced-colors: active) { :scope &gt; span { border-color: CanvasText; } }
+    }
+  &lt;/style&gt;
+  &lt;span&gt;Draft&lt;/span&gt;
+  &lt;span data-tone="primary"&gt;New&lt;/span&gt;
+  &lt;span data-tone="success"&gt;Published&lt;/span&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-badge" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="text-field" class="docs-block" aria-labelledby="title-text-field">
+            <div class="docs-block-heading">
+              <div><h3 id="title-text-field"><span class="docs-block-number">04</span>Text field</h3><p>A clear label, a useful hint, and native input behavior.</p></div>
+              <span class="docs-tag">Form controls</span>
+            </div>
+            <div class="docs-stage" data-component="text-field">
+<div>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > label { display: grid; gap: .5rem; font-size: .875rem; font-weight: 650; }
+      :scope > label > input { box-sizing: border-box; inline-size: 100%; min-inline-size: 0; min-block-size: 2.875rem; padding: .625rem .875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: .625rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.5 system-ui, sans-serif; }
+      :scope > label > input::placeholder { color: var(--bui-muted, #585c70); opacity: 1; }
+      :scope > label > input:focus-visible { border-color: var(--bui-primary, #5943d6); outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; }
+      :scope > label > input:disabled { cursor: not-allowed; background: var(--bui-tint, #f1edff); color: var(--bui-muted, #585c70); }
+      :scope > p { margin: .5rem 0 0; color: var(--bui-muted, #585c70); font-size: .8125rem; }
+    }
+  </style>
+  <label>Email address
+    <input type="email" autocomplete="email" placeholder="you@example.com" aria-description="Use an address you check regularly.">
+  </label>
+  <p>Use an address you check regularly.</p>
+</div>
+</div>
+            <p class="docs-usage">This email field uses native input behavior. Supply a field name and your own enclosing form when collecting values.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-text-field">Text field source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20max-inline-size%3A%2028rem%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%7B%20display%3A%20grid%3B%20gap%3A%20.5rem%3B%20font-size%3A%20.875rem%3B%20font-weight%3A%20650%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%20%7B%20box-sizing%3A%20border-box%3B%20inline-size%3A%20100%25%3B%20min-inline-size%3A%200%3B%20min-block-size%3A%202.875rem%3B%20padding%3A%20.625rem%20.875rem%3B%20border%3A%201px%20solid%20var%28--bui-muted%2C%20%23585c70%29%3B%20border-radius%3A%20.625rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.5%20system-ui%2C%20sans-serif%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%3A%3Aplaceholder%20%7B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20opacity%3A%201%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%3Afocus-visible%20%7B%20border-color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%3Adisabled%20%7B%20cursor%3A%20not-allowed%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%7B%20margin%3A%20.5rem%200%200%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.8125rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Clabel%3EEmail%20address%0A%20%20%20%20%3Cinput%20type%3D%22email%22%20autocomplete%3D%22email%22%20placeholder%3D%22you%40example.com%22%20aria-description%3D%22Use%20an%20address%20you%20check%20regularly.%22%3E%0A%20%20%3C%2Flabel%3E%0A%20%20%3Cp%3EUse%20an%20address%20you%20check%20regularly.%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A" download="text-field.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-text-field" aria-describedby="help-text-field" readonly spellcheck="false" wrap="off" rows="14">&lt;div&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; label { display: grid; gap: .5rem; font-size: .875rem; font-weight: 650; }
+      :scope &gt; label &gt; input { box-sizing: border-box; inline-size: 100%; min-inline-size: 0; min-block-size: 2.875rem; padding: .625rem .875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: .625rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.5 system-ui, sans-serif; }
+      :scope &gt; label &gt; input::placeholder { color: var(--bui-muted, #585c70); opacity: 1; }
+      :scope &gt; label &gt; input:focus-visible { border-color: var(--bui-primary, #5943d6); outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; }
+      :scope &gt; label &gt; input:disabled { cursor: not-allowed; background: var(--bui-tint, #f1edff); color: var(--bui-muted, #585c70); }
+      :scope &gt; p { margin: .5rem 0 0; color: var(--bui-muted, #585c70); font-size: .8125rem; }
+    }
+  &lt;/style&gt;
+  &lt;label&gt;Email address
+    &lt;input type="email" autocomplete="email" placeholder="you@example.com" aria-description="Use an address you check regularly."&gt;
+  &lt;/label&gt;
+  &lt;p&gt;Use an address you check regularly.&lt;/p&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-text-field" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="selection-control" class="docs-block" aria-labelledby="title-selection-control">
+            <div class="docs-block-heading">
+              <div><h3 id="title-selection-control"><span class="docs-block-number">05</span>Checkbox &amp; switch</h3><p>Simple choices with real native checked states.</p></div>
+              <span class="docs-tag">Form controls</span>
+            </div>
+            <div class="docs-stage" data-component="selection-control">
+<div role="group" aria-label="Reading preferences">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; display: grid; gap: .5rem; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 .9375rem/1.5 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > label { position: relative; display: flex; align-items: center; gap: .75rem; min-block-size: 2.75rem; cursor: pointer; }
+      :scope > label > input { flex: 0 0 auto; inline-size: 1.125rem; block-size: 1.125rem; margin: 0; accent-color: var(--bui-primary, #5943d6); }
+      :scope > label > input:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope > label:has(> input:disabled) { color: var(--bui-muted, #585c70); cursor: not-allowed; }
+      :scope > label > input[role="switch"] { position: absolute; inline-size: 1px; block-size: 1px; clip-path: inset(50%); overflow: hidden; }
+      :scope > label > input[role="switch"] + span { box-sizing: border-box; display: flex; align-items: center; flex: 0 0 2.75rem; block-size: 1.625rem; padding: .1875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: 100px; background: var(--bui-surface, #fff); }
+      :scope > label > input[role="switch"] + span::before { content: ""; inline-size: 1.125rem; block-size: 1.125rem; border-radius: 50%; background: var(--bui-muted, #585c70); }
+      :scope > label > input[role="switch"]:checked + span { justify-content: flex-end; border-color: var(--bui-primary, #5943d6); background: var(--bui-primary, #5943d6); }
+      :scope > label > input[role="switch"]:checked + span::before { background: var(--bui-primary-text, #fff); }
+      :scope > label > input[role="switch"]:focus-visible + span { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        :scope > label > input[role="switch"] { position: static; inline-size: 1.125rem; block-size: 1.125rem; clip-path: none; overflow: visible; }
+        :scope > label > input[role="switch"] + span { display: none; }
+      }
+    }
+  </style>
+  <label><input type="checkbox"><span>Save my reading progress</span></label>
+  <label><input type="checkbox" role="switch" checked><span aria-hidden="true"></span><span>Email updates</span></label>
+  <label><input type="checkbox" disabled><span>Team alerts (unavailable)</span></label>
+</div>
+</div>
+            <p class="docs-usage">Click the labels or use Space on a focused input. These examples change local input state; saving values belongs to your form.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-selection-control">Checkbox &amp; switch source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%20role%3D%22group%22%20aria-label%3D%22Reading%20preferences%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20grid%3B%20gap%3A%20.5rem%3B%20max-inline-size%3A%2028rem%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%20.9375rem%2F1.5%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%7B%20position%3A%20relative%3B%20display%3A%20flex%3B%20align-items%3A%20center%3B%20gap%3A%20.75rem%3B%20min-block-size%3A%202.75rem%3B%20cursor%3A%20pointer%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%20%7B%20flex%3A%200%200%20auto%3B%20inline-size%3A%201.125rem%3B%20block-size%3A%201.125rem%3B%20margin%3A%200%3B%20accent-color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%3Ahas%28%3E%20input%3Adisabled%29%20%7B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20cursor%3A%20not-allowed%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%20%7B%20position%3A%20absolute%3B%20inline-size%3A%201px%3B%20block-size%3A%201px%3B%20clip-path%3A%20inset%2850%25%29%3B%20overflow%3A%20hidden%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%20%2B%20span%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20flex%3B%20align-items%3A%20center%3B%20flex%3A%200%200%202.75rem%3B%20block-size%3A%201.625rem%3B%20padding%3A%20.1875rem%3B%20border%3A%201px%20solid%20var%28--bui-muted%2C%20%23585c70%29%3B%20border-radius%3A%20100px%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%20%2B%20span%3A%3Abefore%20%7B%20content%3A%20%22%22%3B%20inline-size%3A%201.125rem%3B%20block-size%3A%201.125rem%3B%20border-radius%3A%2050%25%3B%20background%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%3Achecked%20%2B%20span%20%7B%20justify-content%3A%20flex-end%3B%20border-color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20background%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%3Achecked%20%2B%20span%3A%3Abefore%20%7B%20background%3A%20var%28--bui-primary-text%2C%20%23fff%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%3Afocus-visible%20%2B%20span%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20%7D%0A%20%20%20%20%20%20%40media%20%28forced-colors%3A%20active%29%20%7B%0A%20%20%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%20%7B%20position%3A%20static%3B%20inline-size%3A%201.125rem%3B%20block-size%3A%201.125rem%3B%20clip-path%3A%20none%3B%20overflow%3A%20visible%3B%20%7D%0A%20%20%20%20%20%20%20%20%3Ascope%20%3E%20label%20%3E%20input%5Brole%3D%22switch%22%5D%20%2B%20span%20%7B%20display%3A%20none%3B%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Clabel%3E%3Cinput%20type%3D%22checkbox%22%3E%3Cspan%3ESave%20my%20reading%20progress%3C%2Fspan%3E%3C%2Flabel%3E%0A%20%20%3Clabel%3E%3Cinput%20type%3D%22checkbox%22%20role%3D%22switch%22%20checked%3E%3Cspan%20aria-hidden%3D%22true%22%3E%3C%2Fspan%3E%3Cspan%3EEmail%20updates%3C%2Fspan%3E%3C%2Flabel%3E%0A%20%20%3Clabel%3E%3Cinput%20type%3D%22checkbox%22%20disabled%3E%3Cspan%3ETeam%20alerts%20%28unavailable%29%3C%2Fspan%3E%3C%2Flabel%3E%0A%3C%2Fdiv%3E%0A" download="selection-control.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-selection-control" aria-describedby="help-selection-control" readonly spellcheck="false" wrap="off" rows="14">&lt;div role="group" aria-label="Reading preferences"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; display: grid; gap: .5rem; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 .9375rem/1.5 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; label { position: relative; display: flex; align-items: center; gap: .75rem; min-block-size: 2.75rem; cursor: pointer; }
+      :scope &gt; label &gt; input { flex: 0 0 auto; inline-size: 1.125rem; block-size: 1.125rem; margin: 0; accent-color: var(--bui-primary, #5943d6); }
+      :scope &gt; label &gt; input:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope &gt; label:has(&gt; input:disabled) { color: var(--bui-muted, #585c70); cursor: not-allowed; }
+      :scope &gt; label &gt; input[role="switch"] { position: absolute; inline-size: 1px; block-size: 1px; clip-path: inset(50%); overflow: hidden; }
+      :scope &gt; label &gt; input[role="switch"] + span { box-sizing: border-box; display: flex; align-items: center; flex: 0 0 2.75rem; block-size: 1.625rem; padding: .1875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: 100px; background: var(--bui-surface, #fff); }
+      :scope &gt; label &gt; input[role="switch"] + span::before { content: ""; inline-size: 1.125rem; block-size: 1.125rem; border-radius: 50%; background: var(--bui-muted, #585c70); }
+      :scope &gt; label &gt; input[role="switch"]:checked + span { justify-content: flex-end; border-color: var(--bui-primary, #5943d6); background: var(--bui-primary, #5943d6); }
+      :scope &gt; label &gt; input[role="switch"]:checked + span::before { background: var(--bui-primary-text, #fff); }
+      :scope &gt; label &gt; input[role="switch"]:focus-visible + span { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        :scope &gt; label &gt; input[role="switch"] { position: static; inline-size: 1.125rem; block-size: 1.125rem; clip-path: none; overflow: visible; }
+        :scope &gt; label &gt; input[role="switch"] + span { display: none; }
+      }
+    }
+  &lt;/style&gt;
+  &lt;label&gt;&lt;input type="checkbox"&gt;&lt;span&gt;Save my reading progress&lt;/span&gt;&lt;/label&gt;
+  &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt;&lt;span aria-hidden="true"&gt;&lt;/span&gt;&lt;span&gt;Email updates&lt;/span&gt;&lt;/label&gt;
+  &lt;label&gt;&lt;input type="checkbox" disabled&gt;&lt;span&gt;Team alerts (unavailable)&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-selection-control" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="carousel" class="docs-block" aria-labelledby="title-carousel">
+            <div class="docs-block-heading">
+              <div><h3 id="title-carousel"><span class="docs-block-number">06</span>Carousel</h3><p>A row of cards with native scrolling and scroll snapping.</p></div>
+              <span class="docs-tag">Interaction</span>
+            </div>
+            <div class="docs-stage" data-component="carousel">
+<section aria-label="Featured stories" aria-roledescription="carousel">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; min-inline-size: 0; max-inline-size: 100%; padding: clamp(1rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > h2 { margin: 0 0 .375rem; font-size: 1.375rem; line-height: 1.3; font-weight: 750; letter-spacing: -.025em; }
+      :scope > p { margin: 0 0 1.25rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope > div { display: flex; gap: 1rem; max-inline-size: 100%; overflow-x: auto; padding: .25rem .25rem .75rem; scroll-snap-type: inline proximity; scroll-padding-inline: .25rem; }
+      :scope > div:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .5rem; }
+      :scope > div > article { box-sizing: border-box; flex: 0 0 min(88%, 20rem); min-inline-size: 0; padding: 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: .75rem; background: var(--bui-tint, #f1edff); scroll-snap-align: start; }
+      :scope > div > article > span { display: block; margin-block-end: 1.25rem; color: var(--bui-primary, #5943d6); font-size: .6875rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+      :scope > div > article > h3 { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.3; font-weight: 750; letter-spacing: -.025em; text-wrap: balance; }
+      :scope > div > article > p { margin: 0 0 .75rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope > div > article > a { display: inline-flex; align-items: center; min-block-size: 2.75rem; color: var(--bui-primary, #5943d6); font-size: .875rem; font-weight: 700; text-underline-offset: .2em; }
+      :scope > div > article > a:hover { text-decoration-thickness: .15em; }
+      :scope > div > article > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+      @media print { :scope > div { display: grid; overflow: visible; } }
+    }
+  </style>
+  <h2>A few things worth exploring.</h2>
+  <p>Swipe or scroll to explore. With a keyboard, focus the slides and use the left and right arrow keys, or Tab through the links.</p>
+  <div role="group" aria-label="Scrollable story slides" tabindex="0">
+    <article role="group" aria-roledescription="slide" aria-label="1 of 3">
+      <span>01 · Design</span>
+      <h3>Start with a little space.</h3>
+      <p>Small choices that make an interface feel clear, calm, and easy to use.</p>
+      <a href="https://example.com/journal/space">Read about spacing</a>
+    </article>
+    <article role="group" aria-roledescription="slide" aria-label="2 of 3">
+      <span>02 · Writing</span>
+      <h3>Find the useful words.</h3>
+      <p>A thoughtful heading and a clear next step can make all the difference.</p>
+      <a href="https://example.com/journal/words">Explore useful writing</a>
+    </article>
+    <article role="group" aria-roledescription="slide" aria-label="3 of 3">
+      <span>03 · Building</span>
+      <h3>Make the simple things good.</h3>
+      <p>Keep the pieces small, give them a purpose, and let the browser help.</p>
+      <a href="https://example.com/journal/building">See the building notes</a>
+    </article>
+  </div>
+</section>
+</div>
+            <p class="docs-usage">A finite, manually scrolled carousel. Swipe, use the native scrollbar, focus the track and use arrow keys, or Tab through the slide links.</p>
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-carousel">Carousel source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Csection%20aria-label%3D%22Featured%20stories%22%20aria-roledescription%3D%22carousel%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20min-inline-size%3A%200%3B%20max-inline-size%3A%20100%25%3B%20padding%3A%20clamp%281rem%2C%204vw%2C%202rem%29%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20h2%20%7B%20margin%3A%200%200%20.375rem%3B%20font-size%3A%201.375rem%3B%20line-height%3A%201.3%3B%20font-weight%3A%20750%3B%20letter-spacing%3A%20-.025em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%7B%20margin%3A%200%200%201.25rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.875rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%7B%20display%3A%20flex%3B%20gap%3A%201rem%3B%20max-inline-size%3A%20100%25%3B%20overflow-x%3A%20auto%3B%20padding%3A%20.25rem%20.25rem%20.75rem%3B%20scroll-snap-type%3A%20inline%20proximity%3B%20scroll-padding-inline%3A%20.25rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20border-radius%3A%20.5rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%7B%20box-sizing%3A%20border-box%3B%20flex%3A%200%200%20min%2888%25%2C%2020rem%29%3B%20min-inline-size%3A%200%3B%20padding%3A%201.5rem%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%20.75rem%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20scroll-snap-align%3A%20start%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20span%20%7B%20display%3A%20block%3B%20margin-block-end%3A%201.25rem%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-size%3A%20.6875rem%3B%20font-weight%3A%20750%3B%20letter-spacing%3A%20.1em%3B%20text-transform%3A%20uppercase%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20h3%20%7B%20margin%3A%200%200%20.75rem%3B%20font-size%3A%201.25rem%3B%20line-height%3A%201.3%3B%20font-weight%3A%20750%3B%20letter-spacing%3A%20-.025em%3B%20text-wrap%3A%20balance%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20p%20%7B%20margin%3A%200%200%20.75rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.875rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20a%20%7B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20min-block-size%3A%202.75rem%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-size%3A%20.875rem%3B%20font-weight%3A%20700%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20a%3Ahover%20%7B%20text-decoration-thickness%3A%20.15em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20article%20%3E%20a%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20border-radius%3A%20.25rem%3B%20%7D%0A%20%20%20%20%20%20%40media%20print%20%7B%20%3Ascope%20%3E%20div%20%7B%20display%3A%20grid%3B%20overflow%3A%20visible%3B%20%7D%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Ch2%3EA%20few%20things%20worth%20exploring.%3C%2Fh2%3E%0A%20%20%3Cp%3ESwipe%20or%20scroll%20to%20explore.%20With%20a%20keyboard%2C%20focus%20the%20slides%20and%20use%20the%20left%20and%20right%20arrow%20keys%2C%20or%20Tab%20through%20the%20links.%3C%2Fp%3E%0A%20%20%3Cdiv%20role%3D%22group%22%20aria-label%3D%22Scrollable%20story%20slides%22%20tabindex%3D%220%22%3E%0A%20%20%20%20%3Carticle%20role%3D%22group%22%20aria-roledescription%3D%22slide%22%20aria-label%3D%221%20of%203%22%3E%0A%20%20%20%20%20%20%3Cspan%3E01%20%C2%B7%20Design%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Ch3%3EStart%20with%20a%20little%20space.%3C%2Fh3%3E%0A%20%20%20%20%20%20%3Cp%3ESmall%20choices%20that%20make%20an%20interface%20feel%20clear%2C%20calm%2C%20and%20easy%20to%20use.%3C%2Fp%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fjournal%2Fspace%22%3ERead%20about%20spacing%3C%2Fa%3E%0A%20%20%20%20%3C%2Farticle%3E%0A%20%20%20%20%3Carticle%20role%3D%22group%22%20aria-roledescription%3D%22slide%22%20aria-label%3D%222%20of%203%22%3E%0A%20%20%20%20%20%20%3Cspan%3E02%20%C2%B7%20Writing%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Ch3%3EFind%20the%20useful%20words.%3C%2Fh3%3E%0A%20%20%20%20%20%20%3Cp%3EA%20thoughtful%20heading%20and%20a%20clear%20next%20step%20can%20make%20all%20the%20difference.%3C%2Fp%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fjournal%2Fwords%22%3EExplore%20useful%20writing%3C%2Fa%3E%0A%20%20%20%20%3C%2Farticle%3E%0A%20%20%20%20%3Carticle%20role%3D%22group%22%20aria-roledescription%3D%22slide%22%20aria-label%3D%223%20of%203%22%3E%0A%20%20%20%20%20%20%3Cspan%3E03%20%C2%B7%20Building%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Ch3%3EMake%20the%20simple%20things%20good.%3C%2Fh3%3E%0A%20%20%20%20%20%20%3Cp%3EKeep%20the%20pieces%20small%2C%20give%20them%20a%20purpose%2C%20and%20let%20the%20browser%20help.%3C%2Fp%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fjournal%2Fbuilding%22%3ESee%20the%20building%20notes%3C%2Fa%3E%0A%20%20%20%20%3C%2Farticle%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fsection%3E%0A" download="carousel.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-carousel" aria-describedby="help-carousel" readonly spellcheck="false" wrap="off" rows="14">&lt;section aria-label="Featured stories" aria-roledescription="carousel"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; min-inline-size: 0; max-inline-size: 100%; padding: clamp(1rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; h2 { margin: 0 0 .375rem; font-size: 1.375rem; line-height: 1.3; font-weight: 750; letter-spacing: -.025em; }
+      :scope &gt; p { margin: 0 0 1.25rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope &gt; div { display: flex; gap: 1rem; max-inline-size: 100%; overflow-x: auto; padding: .25rem .25rem .75rem; scroll-snap-type: inline proximity; scroll-padding-inline: .25rem; }
+      :scope &gt; div:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .5rem; }
+      :scope &gt; div &gt; article { box-sizing: border-box; flex: 0 0 min(88%, 20rem); min-inline-size: 0; padding: 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: .75rem; background: var(--bui-tint, #f1edff); scroll-snap-align: start; }
+      :scope &gt; div &gt; article &gt; span { display: block; margin-block-end: 1.25rem; color: var(--bui-primary, #5943d6); font-size: .6875rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+      :scope &gt; div &gt; article &gt; h3 { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.3; font-weight: 750; letter-spacing: -.025em; text-wrap: balance; }
+      :scope &gt; div &gt; article &gt; p { margin: 0 0 .75rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope &gt; div &gt; article &gt; a { display: inline-flex; align-items: center; min-block-size: 2.75rem; color: var(--bui-primary, #5943d6); font-size: .875rem; font-weight: 700; text-underline-offset: .2em; }
+      :scope &gt; div &gt; article &gt; a:hover { text-decoration-thickness: .15em; }
+      :scope &gt; div &gt; article &gt; a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+      @media print { :scope &gt; div { display: grid; overflow: visible; } }
+    }
+  &lt;/style&gt;
+  &lt;h2&gt;A few things worth exploring.&lt;/h2&gt;
+  &lt;p&gt;Swipe or scroll to explore. With a keyboard, focus the slides and use the left and right arrow keys, or Tab through the links.&lt;/p&gt;
+  &lt;div role="group" aria-label="Scrollable story slides" tabindex="0"&gt;
+    &lt;article role="group" aria-roledescription="slide" aria-label="1 of 3"&gt;
+      &lt;span&gt;01 · Design&lt;/span&gt;
+      &lt;h3&gt;Start with a little space.&lt;/h3&gt;
+      &lt;p&gt;Small choices that make an interface feel clear, calm, and easy to use.&lt;/p&gt;
+      &lt;a href="https://example.com/journal/space"&gt;Read about spacing&lt;/a&gt;
+    &lt;/article&gt;
+    &lt;article role="group" aria-roledescription="slide" aria-label="2 of 3"&gt;
+      &lt;span&gt;02 · Writing&lt;/span&gt;
+      &lt;h3&gt;Find the useful words.&lt;/h3&gt;
+      &lt;p&gt;A thoughtful heading and a clear next step can make all the difference.&lt;/p&gt;
+      &lt;a href="https://example.com/journal/words"&gt;Explore useful writing&lt;/a&gt;
+    &lt;/article&gt;
+    &lt;article role="group" aria-roledescription="slide" aria-label="3 of 3"&gt;
+      &lt;span&gt;03 · Building&lt;/span&gt;
+      &lt;h3&gt;Make the simple things good.&lt;/h3&gt;
+      &lt;p&gt;Keep the pieces small, give them a purpose, and let the browser help.&lt;/p&gt;
+      &lt;a href="https://example.com/journal/building"&gt;See the building notes&lt;/a&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</textarea>
+                <p id="help-carousel" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="accordion" class="docs-block" aria-labelledby="title-accordion">
+            <div class="docs-block-heading">
+              <div><h3 id="title-accordion"><span class="docs-block-number">07</span>FAQ</h3><p>Real disclosure controls. The browser does the work.</p></div>
+              <span class="docs-tag">Interaction</span>
+            </div>
+            <div class="docs-stage" data-component="accordion">
+<section>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > h2 { margin: 0 0 .375rem; font-size: 1.375rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; }
+      :scope > p { margin: 0 0 1.25rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope > details { border-block-start: 1px solid var(--bui-border, #e4e2eb); }
+      :scope > details > summary { padding-block: 1rem; cursor: pointer; font-weight: 650; }
+      :scope > details > summary::marker { color: var(--bui-primary, #5943d6); }
+      :scope > details > summary:hover { color: var(--bui-primary, #5943d6); }
+      :scope > details > summary:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+      :scope > details > p { margin: 0 0 1rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+    }
+  </style>
+  <h2>A few good questions.</h2>
+  <p>The essentials, with a little room for detail.</p>
+  <details>
+    <summary>Do I need to install anything?</summary>
+    <p>No. Copy this entire block, including its style element, into your page. The browser handles the disclosure controls.</p>
+  </details>
+  <details>
+    <summary>Can I make it feel like my site?</summary>
+    <p>Yes. Change the text and colors in the block, or set the shared custom properties on a parent element.</p>
+  </details>
+  <details>
+    <summary>Can several answers stay open?</summary>
+    <p>Yes. Each answer opens independently, so your readers can compare details without losing their place.</p>
+  </details>
+</section>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-accordion">FAQ source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Csection%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20padding%3A%20clamp%281.25rem%2C%204vw%2C%202rem%29%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20h2%20%7B%20margin%3A%200%200%20.375rem%3B%20font-size%3A%201.375rem%3B%20font-weight%3A%20750%3B%20line-height%3A%201.3%3B%20letter-spacing%3A%20-.025em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%7B%20margin%3A%200%200%201.25rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.9375rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%7B%20border-block-start%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%3E%20summary%20%7B%20padding-block%3A%201rem%3B%20cursor%3A%20pointer%3B%20font-weight%3A%20650%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%3E%20summary%3A%3Amarker%20%7B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%3E%20summary%3Ahover%20%7B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%3E%20summary%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20border-radius%3A%20.25rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20details%20%3E%20p%20%7B%20margin%3A%200%200%201rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.9375rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Ch2%3EA%20few%20good%20questions.%3C%2Fh2%3E%0A%20%20%3Cp%3EThe%20essentials%2C%20with%20a%20little%20room%20for%20detail.%3C%2Fp%3E%0A%20%20%3Cdetails%3E%0A%20%20%20%20%3Csummary%3EDo%20I%20need%20to%20install%20anything%3F%3C%2Fsummary%3E%0A%20%20%20%20%3Cp%3ENo.%20Copy%20this%20entire%20block%2C%20including%20its%20style%20element%2C%20into%20your%20page.%20The%20browser%20handles%20the%20disclosure%20controls.%3C%2Fp%3E%0A%20%20%3C%2Fdetails%3E%0A%20%20%3Cdetails%3E%0A%20%20%20%20%3Csummary%3ECan%20I%20make%20it%20feel%20like%20my%20site%3F%3C%2Fsummary%3E%0A%20%20%20%20%3Cp%3EYes.%20Change%20the%20text%20and%20colors%20in%20the%20block%2C%20or%20set%20the%20shared%20custom%20properties%20on%20a%20parent%20element.%3C%2Fp%3E%0A%20%20%3C%2Fdetails%3E%0A%20%20%3Cdetails%3E%0A%20%20%20%20%3Csummary%3ECan%20several%20answers%20stay%20open%3F%3C%2Fsummary%3E%0A%20%20%20%20%3Cp%3EYes.%20Each%20answer%20opens%20independently%2C%20so%20your%20readers%20can%20compare%20details%20without%20losing%20their%20place.%3C%2Fp%3E%0A%20%20%3C%2Fdetails%3E%0A%3C%2Fsection%3E%0A" download="accordion.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-accordion" aria-describedby="help-accordion" readonly spellcheck="false" wrap="off" rows="14">&lt;section&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; h2 { margin: 0 0 .375rem; font-size: 1.375rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; }
+      :scope &gt; p { margin: 0 0 1.25rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope &gt; details { border-block-start: 1px solid var(--bui-border, #e4e2eb); }
+      :scope &gt; details &gt; summary { padding-block: 1rem; cursor: pointer; font-weight: 650; }
+      :scope &gt; details &gt; summary::marker { color: var(--bui-primary, #5943d6); }
+      :scope &gt; details &gt; summary:hover { color: var(--bui-primary, #5943d6); }
+      :scope &gt; details &gt; summary:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+      :scope &gt; details &gt; p { margin: 0 0 1rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+    }
+  &lt;/style&gt;
+  &lt;h2&gt;A few good questions.&lt;/h2&gt;
+  &lt;p&gt;The essentials, with a little room for detail.&lt;/p&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Do I need to install anything?&lt;/summary&gt;
+    &lt;p&gt;No. Copy this entire block, including its style element, into your page. The browser handles the disclosure controls.&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Can I make it feel like my site?&lt;/summary&gt;
+    &lt;p&gt;Yes. Change the text and colors in the block, or set the shared custom properties on a parent element.&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Can several answers stay open?&lt;/summary&gt;
+    &lt;p&gt;Yes. Each answer opens independently, so your readers can compare details without losing their place.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/section&gt;
+</textarea>
+                <p id="help-accordion" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="article-card" class="docs-block" aria-labelledby="title-article-card">
+            <div class="docs-block-heading">
+              <div><h3 id="title-article-card"><span class="docs-block-number">08</span>Article card</h3><p>A welcoming cover for your next story.</p></div>
+              <span class="docs-tag">Content</span>
+            </div>
+            <div class="docs-stage" data-component="article-card">
+<article>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 32rem; overflow: hidden; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > header { padding: clamp(1.5rem, 5vw, 2.5rem); background: var(--bui-tint, #f1edff); }
+      :scope > header > p { margin: 0 0 1rem; color: var(--bui-primary, #5943d6); font-size: .75rem; font-weight: 750; letter-spacing: .12em; }
+      :scope > header > h2 { max-inline-size: 14ch; margin: 0; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 750; line-height: 1.12; letter-spacing: -.045em; text-wrap: balance; }
+      :scope > p { margin: 0; padding: 1.5rem 1.5rem 1rem; color: var(--bui-muted, #585c70); }
+      :scope > footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding: 0 1.5rem 1.25rem; font-size: .875rem; }
+      :scope > footer > span { color: var(--bui-muted, #585c70); }
+      :scope > footer > a { display: inline-flex; align-items: center; min-block-size: 2.75rem; gap: .5rem; color: var(--bui-primary, #5943d6); font-weight: 700; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope > footer > a:hover { text-decoration-thickness: .16em; }
+      :scope > footer > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; border-radius: .25rem; }
+    }
+  </style>
+  <header>
+    <p>FIELD NOTES · 06</p>
+    <h2>Small details. Better reading.</h2>
+  </header>
+  <p>A practical guide to making space, choosing a rhythm, and helping your words feel at home.</p>
+  <footer>
+    <span>5 min read</span>
+    <a href="https://example.com/journal/small-details" aria-label="Read the story: Small details. Better reading.">Read the story <span aria-hidden="true">↗</span></a>
+  </footer>
+</article>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-article-card">Article card source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Carticle%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20max-inline-size%3A%2032rem%3B%20overflow%3A%20hidden%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20header%20%7B%20padding%3A%20clamp%281.5rem%2C%205vw%2C%202.5rem%29%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20header%20%3E%20p%20%7B%20margin%3A%200%200%201rem%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-size%3A%20.75rem%3B%20font-weight%3A%20750%3B%20letter-spacing%3A%20.12em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20header%20%3E%20h2%20%7B%20max-inline-size%3A%2014ch%3B%20margin%3A%200%3B%20font-size%3A%20clamp%281.75rem%2C%204vw%2C%202.5rem%29%3B%20font-weight%3A%20750%3B%20line-height%3A%201.12%3B%20letter-spacing%3A%20-.045em%3B%20text-wrap%3A%20balance%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%7B%20margin%3A%200%3B%20padding%3A%201.5rem%201.5rem%201rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20footer%20%7B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20center%3B%20justify-content%3A%20space-between%3B%20gap%3A%20.5rem%201rem%3B%20padding%3A%200%201.5rem%201.25rem%3B%20font-size%3A%20.875rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20footer%20%3E%20span%20%7B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20footer%20%3E%20a%20%7B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20min-block-size%3A%202.75rem%3B%20gap%3A%20.5rem%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-weight%3A%20700%3B%20text-decoration-thickness%3A%20.08em%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20footer%20%3E%20a%3Ahover%20%7B%20text-decoration-thickness%3A%20.16em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20footer%20%3E%20a%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20border-radius%3A%20.25rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cheader%3E%0A%20%20%20%20%3Cp%3EFIELD%20NOTES%20%C2%B7%2006%3C%2Fp%3E%0A%20%20%20%20%3Ch2%3ESmall%20details.%20Better%20reading.%3C%2Fh2%3E%0A%20%20%3C%2Fheader%3E%0A%20%20%3Cp%3EA%20practical%20guide%20to%20making%20space%2C%20choosing%20a%20rhythm%2C%20and%20helping%20your%20words%20feel%20at%20home.%3C%2Fp%3E%0A%20%20%3Cfooter%3E%0A%20%20%20%20%3Cspan%3E5%20min%20read%3C%2Fspan%3E%0A%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fjournal%2Fsmall-details%22%20aria-label%3D%22Read%20the%20story%3A%20Small%20details.%20Better%20reading.%22%3ERead%20the%20story%20%3Cspan%20aria-hidden%3D%22true%22%3E%E2%86%97%3C%2Fspan%3E%3C%2Fa%3E%0A%20%20%3C%2Ffooter%3E%0A%3C%2Farticle%3E%0A" download="article-card.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-article-card" aria-describedby="help-article-card" readonly spellcheck="false" wrap="off" rows="14">&lt;article&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 32rem; overflow: hidden; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; header { padding: clamp(1.5rem, 5vw, 2.5rem); background: var(--bui-tint, #f1edff); }
+      :scope &gt; header &gt; p { margin: 0 0 1rem; color: var(--bui-primary, #5943d6); font-size: .75rem; font-weight: 750; letter-spacing: .12em; }
+      :scope &gt; header &gt; h2 { max-inline-size: 14ch; margin: 0; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 750; line-height: 1.12; letter-spacing: -.045em; text-wrap: balance; }
+      :scope &gt; p { margin: 0; padding: 1.5rem 1.5rem 1rem; color: var(--bui-muted, #585c70); }
+      :scope &gt; footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding: 0 1.5rem 1.25rem; font-size: .875rem; }
+      :scope &gt; footer &gt; span { color: var(--bui-muted, #585c70); }
+      :scope &gt; footer &gt; a { display: inline-flex; align-items: center; min-block-size: 2.75rem; gap: .5rem; color: var(--bui-primary, #5943d6); font-weight: 700; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope &gt; footer &gt; a:hover { text-decoration-thickness: .16em; }
+      :scope &gt; footer &gt; a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; border-radius: .25rem; }
+    }
+  &lt;/style&gt;
+  &lt;header&gt;
+    &lt;p&gt;FIELD NOTES · 06&lt;/p&gt;
+    &lt;h2&gt;Small details. Better reading.&lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;p&gt;A practical guide to making space, choosing a rhythm, and helping your words feel at home.&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;span&gt;5 min read&lt;/span&gt;
+    &lt;a href="https://example.com/journal/small-details" aria-label="Read the story: Small details. Better reading."&gt;Read the story &lt;span aria-hidden="true"&gt;↗&lt;/span&gt;&lt;/a&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</textarea>
+                <p id="help-article-card" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="callout" class="docs-block" aria-labelledby="title-callout">
+            <div class="docs-block-heading">
+              <div><h3 id="title-callout"><span class="docs-block-number">09</span>Callout</h3><p>Give a useful tip a little more attention.</p></div>
+              <span class="docs-tag">Content</span>
+            </div>
+            <div class="docs-stage" data-component="callout">
+<aside aria-label="Writing tip">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; padding: 1.25rem 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-inline-start: 4px solid var(--bui-primary, #5943d6); border-radius: .75rem; background: var(--bui-tint, #f1edff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > strong { display: block; margin-block-end: .25rem; font-size: .9375rem; font-weight: 750; }
+      :scope > p { margin: 0; color: var(--bui-muted, #585c70); }
+      :scope > p > a { color: var(--bui-primary, #5943d6); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope > p > a:hover { text-decoration-thickness: .16em; }
+      :scope > p > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .125rem; }
+    }
+  </style>
+  <strong>A little breathing room goes a long way.</strong>
+  <p>Keep each paragraph focused on one idea. A clear rhythm makes even a long story easier to read. <a href="https://example.com/guides/writing">Explore the writing guide</a>.</p>
+</aside>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-callout">Callout source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Caside%20aria-label%3D%22Writing%20tip%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20padding%3A%201.25rem%201.5rem%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-inline-start%3A%204px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20border-radius%3A%20.75rem%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20strong%20%7B%20display%3A%20block%3B%20margin-block-end%3A%20.25rem%3B%20font-size%3A%20.9375rem%3B%20font-weight%3A%20750%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%7B%20margin%3A%200%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%3E%20a%20%7B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20text-decoration-thickness%3A%20.08em%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%3E%20a%3Ahover%20%7B%20text-decoration-thickness%3A%20.16em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20p%20%3E%20a%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20border-radius%3A%20.125rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cstrong%3EA%20little%20breathing%20room%20goes%20a%20long%20way.%3C%2Fstrong%3E%0A%20%20%3Cp%3EKeep%20each%20paragraph%20focused%20on%20one%20idea.%20A%20clear%20rhythm%20makes%20even%20a%20long%20story%20easier%20to%20read.%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fguides%2Fwriting%22%3EExplore%20the%20writing%20guide%3C%2Fa%3E.%3C%2Fp%3E%0A%3C%2Faside%3E%0A" download="callout.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-callout" aria-describedby="help-callout" readonly spellcheck="false" wrap="off" rows="14">&lt;aside aria-label="Writing tip"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; padding: 1.25rem 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-inline-start: 4px solid var(--bui-primary, #5943d6); border-radius: .75rem; background: var(--bui-tint, #f1edff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; strong { display: block; margin-block-end: .25rem; font-size: .9375rem; font-weight: 750; }
+      :scope &gt; p { margin: 0; color: var(--bui-muted, #585c70); }
+      :scope &gt; p &gt; a { color: var(--bui-primary, #5943d6); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope &gt; p &gt; a:hover { text-decoration-thickness: .16em; }
+      :scope &gt; p &gt; a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .125rem; }
+    }
+  &lt;/style&gt;
+  &lt;strong&gt;A little breathing room goes a long way.&lt;/strong&gt;
+  &lt;p&gt;Keep each paragraph focused on one idea. A clear rhythm makes even a long story easier to read. &lt;a href="https://example.com/guides/writing"&gt;Explore the writing guide&lt;/a&gt;.&lt;/p&gt;
+&lt;/aside&gt;
+</textarea>
+                <p id="help-callout" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="quote" class="docs-block" aria-labelledby="title-quote">
+            <div class="docs-block-heading">
+              <div><h3 id="title-quote"><span class="docs-block-number">10</span>Quote</h3><p>Let a thoughtful line stand on its own.</p></div>
+              <span class="docs-tag">Content</span>
+            </div>
+            <div class="docs-stage" data-component="quote">
+<figure>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; margin: 0; padding: clamp(1.5rem, 5vw, 2.5rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > blockquote { margin: 0; padding-inline-start: 1.25rem; border-inline-start: 3px solid var(--bui-primary, #5943d6); }
+      :scope > blockquote > p { margin: 0; font-family: Georgia, serif; font-size: clamp(1.25rem, 3vw, 1.75rem); line-height: 1.5; text-wrap: pretty; }
+      :scope > figcaption { margin-block-start: 1.25rem; padding-inline-start: 1.5rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope > figcaption > strong { color: var(--bui-text, #202437); font-weight: 700; }
+    }
+  </style>
+  <blockquote>
+    <p>“The best page gives an idea enough room to become a conversation.”</p>
+  </blockquote>
+  <figcaption><strong>Alex Morgan</strong> · A fictional voice from our design journal</figcaption>
+</figure>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-quote">Quote source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cfigure%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20margin%3A%200%3B%20padding%3A%20clamp%281.5rem%2C%205vw%2C%202.5rem%29%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20blockquote%20%7B%20margin%3A%200%3B%20padding-inline-start%3A%201.25rem%3B%20border-inline-start%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20blockquote%20%3E%20p%20%7B%20margin%3A%200%3B%20font-family%3A%20Georgia%2C%20serif%3B%20font-size%3A%20clamp%281.25rem%2C%203vw%2C%201.75rem%29%3B%20line-height%3A%201.5%3B%20text-wrap%3A%20pretty%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20figcaption%20%7B%20margin-block-start%3A%201.25rem%3B%20padding-inline-start%3A%201.5rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.875rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20figcaption%20%3E%20strong%20%7B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font-weight%3A%20700%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cblockquote%3E%0A%20%20%20%20%3Cp%3E%E2%80%9CThe%20best%20page%20gives%20an%20idea%20enough%20room%20to%20become%20a%20conversation.%E2%80%9D%3C%2Fp%3E%0A%20%20%3C%2Fblockquote%3E%0A%20%20%3Cfigcaption%3E%3Cstrong%3EAlex%20Morgan%3C%2Fstrong%3E%20%C2%B7%20A%20fictional%20voice%20from%20our%20design%20journal%3C%2Ffigcaption%3E%0A%3C%2Ffigure%3E%0A" download="quote.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-quote" aria-describedby="help-quote" readonly spellcheck="false" wrap="off" rows="14">&lt;figure&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; margin: 0; padding: clamp(1.5rem, 5vw, 2.5rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; blockquote { margin: 0; padding-inline-start: 1.25rem; border-inline-start: 3px solid var(--bui-primary, #5943d6); }
+      :scope &gt; blockquote &gt; p { margin: 0; font-family: Georgia, serif; font-size: clamp(1.25rem, 3vw, 1.75rem); line-height: 1.5; text-wrap: pretty; }
+      :scope &gt; figcaption { margin-block-start: 1.25rem; padding-inline-start: 1.5rem; color: var(--bui-muted, #585c70); font-size: .875rem; }
+      :scope &gt; figcaption &gt; strong { color: var(--bui-text, #202437); font-weight: 700; }
+    }
+  &lt;/style&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;“The best page gives an idea enough room to become a conversation.”&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption&gt;&lt;strong&gt;Alex Morgan&lt;/strong&gt; · A fictional voice from our design journal&lt;/figcaption&gt;
+&lt;/figure&gt;
+</textarea>
+                <p id="help-quote" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="table" class="docs-block" aria-labelledby="title-table">
+            <div class="docs-block-heading">
+              <div><h3 id="title-table"><span class="docs-block-number">11</span>Comparison table</h3><p>Make the differences easy to scan.</p></div>
+              <span class="docs-tag">Content</span>
+            </div>
+            <div class="docs-stage" data-component="table">
+<div role="region" aria-label="Comparison of article formats; scroll horizontally if needed" tabindex="0">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 100%; overflow-x: auto; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 .9375rem/1.6 system-ui, sans-serif; }
+      :scope:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope > table { inline-size: 100%; border-collapse: collapse; text-align: start; }
+      :scope > table > caption { padding: 1.25rem; text-align: start; font-size: 1.125rem; font-weight: 750; }
+      :scope > table > thead { background: var(--bui-tint, #f1edff); }
+      :scope > table > thead > tr > th { padding: .75rem 1.25rem; font-size: .75rem; font-weight: 750; text-align: start; white-space: nowrap; }
+      :scope > table > tbody > tr > th { padding: 1rem 1.25rem; border-block-start: 1px solid var(--bui-border, #e4e2eb); font-weight: 650; text-align: start; white-space: nowrap; }
+      :scope > table > tbody > tr > td { padding: 1rem 1.25rem; border-block-start: 1px solid var(--bui-border, #e4e2eb); color: var(--bui-muted, #585c70); }
+      :scope > table > tbody > tr > td:last-child { white-space: nowrap; }
+    }
+  </style>
+  <table>
+    <caption>Choose the right shape for your story.</caption>
+    <thead><tr><th scope="col">Format</th><th scope="col">Best for</th><th scope="col">Reading time</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Field note</th><td>One useful observation</td><td>2–3 min</td></tr>
+      <tr><th scope="row">Guide</th><td>A clear path through a problem</td><td>5–8 min</td></tr>
+      <tr><th scope="row">Essay</th><td>An idea worth exploring</td><td>8–12 min</td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-table">Comparison table source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Cdiv%20role%3D%22region%22%20aria-label%3D%22Comparison%20of%20article%20formats%3B%20scroll%20horizontally%20if%20needed%22%20tabindex%3D%220%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20max-inline-size%3A%20100%25%3B%20overflow-x%3A%20auto%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%20.9375rem%2F1.6%20system-ui%2C%20sans-serif%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%7B%20inline-size%3A%20100%25%3B%20border-collapse%3A%20collapse%3B%20text-align%3A%20start%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20caption%20%7B%20padding%3A%201.25rem%3B%20text-align%3A%20start%3B%20font-size%3A%201.125rem%3B%20font-weight%3A%20750%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20thead%20%7B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20thead%20%3E%20tr%20%3E%20th%20%7B%20padding%3A%20.75rem%201.25rem%3B%20font-size%3A%20.75rem%3B%20font-weight%3A%20750%3B%20text-align%3A%20start%3B%20white-space%3A%20nowrap%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20tbody%20%3E%20tr%20%3E%20th%20%7B%20padding%3A%201rem%201.25rem%3B%20border-block-start%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20font-weight%3A%20650%3B%20text-align%3A%20start%3B%20white-space%3A%20nowrap%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20tbody%20%3E%20tr%20%3E%20td%20%7B%20padding%3A%201rem%201.25rem%3B%20border-block-start%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20table%20%3E%20tbody%20%3E%20tr%20%3E%20td%3Alast-child%20%7B%20white-space%3A%20nowrap%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Ctable%3E%0A%20%20%20%20%3Ccaption%3EChoose%20the%20right%20shape%20for%20your%20story.%3C%2Fcaption%3E%0A%20%20%20%20%3Cthead%3E%3Ctr%3E%3Cth%20scope%3D%22col%22%3EFormat%3C%2Fth%3E%3Cth%20scope%3D%22col%22%3EBest%20for%3C%2Fth%3E%3Cth%20scope%3D%22col%22%3EReading%20time%3C%2Fth%3E%3C%2Ftr%3E%3C%2Fthead%3E%0A%20%20%20%20%3Ctbody%3E%0A%20%20%20%20%20%20%3Ctr%3E%3Cth%20scope%3D%22row%22%3EField%20note%3C%2Fth%3E%3Ctd%3EOne%20useful%20observation%3C%2Ftd%3E%3Ctd%3E2%E2%80%933%20min%3C%2Ftd%3E%3C%2Ftr%3E%0A%20%20%20%20%20%20%3Ctr%3E%3Cth%20scope%3D%22row%22%3EGuide%3C%2Fth%3E%3Ctd%3EA%20clear%20path%20through%20a%20problem%3C%2Ftd%3E%3Ctd%3E5%E2%80%938%20min%3C%2Ftd%3E%3C%2Ftr%3E%0A%20%20%20%20%20%20%3Ctr%3E%3Cth%20scope%3D%22row%22%3EEssay%3C%2Fth%3E%3Ctd%3EAn%20idea%20worth%20exploring%3C%2Ftd%3E%3Ctd%3E8%E2%80%9312%20min%3C%2Ftd%3E%3C%2Ftr%3E%0A%20%20%20%20%3C%2Ftbody%3E%0A%20%20%3C%2Ftable%3E%0A%3C%2Fdiv%3E%0A" download="table.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-table" aria-describedby="help-table" readonly spellcheck="false" wrap="off" rows="14">&lt;div role="region" aria-label="Comparison of article formats; scroll horizontally if needed" tabindex="0"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; max-inline-size: 100%; overflow-x: auto; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 .9375rem/1.6 system-ui, sans-serif; }
+      :scope:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope &gt; table { inline-size: 100%; border-collapse: collapse; text-align: start; }
+      :scope &gt; table &gt; caption { padding: 1.25rem; text-align: start; font-size: 1.125rem; font-weight: 750; }
+      :scope &gt; table &gt; thead { background: var(--bui-tint, #f1edff); }
+      :scope &gt; table &gt; thead &gt; tr &gt; th { padding: .75rem 1.25rem; font-size: .75rem; font-weight: 750; text-align: start; white-space: nowrap; }
+      :scope &gt; table &gt; tbody &gt; tr &gt; th { padding: 1rem 1.25rem; border-block-start: 1px solid var(--bui-border, #e4e2eb); font-weight: 650; text-align: start; white-space: nowrap; }
+      :scope &gt; table &gt; tbody &gt; tr &gt; td { padding: 1rem 1.25rem; border-block-start: 1px solid var(--bui-border, #e4e2eb); color: var(--bui-muted, #585c70); }
+      :scope &gt; table &gt; tbody &gt; tr &gt; td:last-child { white-space: nowrap; }
+    }
+  &lt;/style&gt;
+  &lt;table&gt;
+    &lt;caption&gt;Choose the right shape for your story.&lt;/caption&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Format&lt;/th&gt;&lt;th scope="col"&gt;Best for&lt;/th&gt;&lt;th scope="col"&gt;Reading time&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope="row"&gt;Field note&lt;/th&gt;&lt;td&gt;One useful observation&lt;/td&gt;&lt;td&gt;2–3 min&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope="row"&gt;Guide&lt;/th&gt;&lt;td&gt;A clear path through a problem&lt;/td&gt;&lt;td&gt;5–8 min&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope="row"&gt;Essay&lt;/th&gt;&lt;td&gt;An idea worth exploring&lt;/td&gt;&lt;td&gt;8–12 min&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</textarea>
+                <p id="help-table" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="author-card" class="docs-block" aria-labelledby="title-author-card">
+            <div class="docs-block-heading">
+              <div><h3 id="title-author-card"><span class="docs-block-number">12</span>Author card</h3><p>Put a person behind the words.</p></div>
+              <span class="docs-tag">Page sections</span>
+            </div>
+            <div class="docs-stage" data-component="author-card">
+<aside aria-label="About the author">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; padding: 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > span { display: grid; flex: 0 0 3.5rem; place-items: center; inline-size: 3.5rem; block-size: 3.5rem; border-radius: 50%; background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); font-size: 1rem; font-weight: 750; }
+      :scope > div { flex: 1 1 12rem; min-inline-size: 0; }
+      :scope > div > p:first-child { margin: 0 0 .25rem; color: var(--bui-muted, #585c70); font-size: .6875rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      :scope > div > h2 { margin: 0 0 .375rem; font-size: 1.125rem; font-weight: 750; line-height: 1.3; }
+      :scope > div > p { margin: 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope > div > a { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: .25rem; color: var(--bui-primary, #5943d6); font-size: .875rem; font-weight: 700; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope > div > a:hover { text-decoration-thickness: .16em; }
+      :scope > div > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+    }
+  </style>
+  <span aria-hidden="true">AM</span>
+  <div>
+    <p>Written by</p>
+    <h2>Alex Morgan</h2>
+    <p>A fictional writer exploring thoughtful interfaces, useful words, and the spaces in between.</p>
+    <a href="https://example.com/authors/alex-morgan">More from Alex</a>
+  </div>
+</aside>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-author-card">Author card source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Caside%20aria-label%3D%22About%20the%20author%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20flex-start%3B%20gap%3A%201rem%3B%20padding%3A%201.5rem%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20span%20%7B%20display%3A%20grid%3B%20flex%3A%200%200%203.5rem%3B%20place-items%3A%20center%3B%20inline-size%3A%203.5rem%3B%20block-size%3A%203.5rem%3B%20border-radius%3A%2050%25%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-size%3A%201rem%3B%20font-weight%3A%20750%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%7B%20flex%3A%201%201%2012rem%3B%20min-inline-size%3A%200%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20p%3Afirst-child%20%7B%20margin%3A%200%200%20.25rem%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.6875rem%3B%20font-weight%3A%20700%3B%20letter-spacing%3A%20.12em%3B%20text-transform%3A%20uppercase%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20h2%20%7B%20margin%3A%200%200%20.375rem%3B%20font-size%3A%201.125rem%3B%20font-weight%3A%20750%3B%20line-height%3A%201.3%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20p%20%7B%20margin%3A%200%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.9375rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20a%20%7B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20min-block-size%3A%202.75rem%3B%20margin-block-start%3A%20.25rem%3B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-size%3A%20.875rem%3B%20font-weight%3A%20700%3B%20text-decoration-thickness%3A%20.08em%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20a%3Ahover%20%7B%20text-decoration-thickness%3A%20.16em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20a%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%203px%3B%20border-radius%3A%20.25rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cspan%20aria-hidden%3D%22true%22%3EAM%3C%2Fspan%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cp%3EWritten%20by%3C%2Fp%3E%0A%20%20%20%20%3Ch2%3EAlex%20Morgan%3C%2Fh2%3E%0A%20%20%20%20%3Cp%3EA%20fictional%20writer%20exploring%20thoughtful%20interfaces%2C%20useful%20words%2C%20and%20the%20spaces%20in%20between.%3C%2Fp%3E%0A%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fauthors%2Falex-morgan%22%3EMore%20from%20Alex%3C%2Fa%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Faside%3E%0A" download="author-card.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-author-card" aria-describedby="help-author-card" readonly spellcheck="false" wrap="off" rows="14">&lt;aside aria-label="About the author"&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; padding: 1.5rem; border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; span { display: grid; flex: 0 0 3.5rem; place-items: center; inline-size: 3.5rem; block-size: 3.5rem; border-radius: 50%; background: var(--bui-tint, #f1edff); color: var(--bui-primary, #5943d6); font-size: 1rem; font-weight: 750; }
+      :scope &gt; div { flex: 1 1 12rem; min-inline-size: 0; }
+      :scope &gt; div &gt; p:first-child { margin: 0 0 .25rem; color: var(--bui-muted, #585c70); font-size: .6875rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      :scope &gt; div &gt; h2 { margin: 0 0 .375rem; font-size: 1.125rem; font-weight: 750; line-height: 1.3; }
+      :scope &gt; div &gt; p { margin: 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope &gt; div &gt; a { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: .25rem; color: var(--bui-primary, #5943d6); font-size: .875rem; font-weight: 700; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+      :scope &gt; div &gt; a:hover { text-decoration-thickness: .16em; }
+      :scope &gt; div &gt; a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+    }
+  &lt;/style&gt;
+  &lt;span aria-hidden="true"&gt;AM&lt;/span&gt;
+  &lt;div&gt;
+    &lt;p&gt;Written by&lt;/p&gt;
+    &lt;h2&gt;Alex Morgan&lt;/h2&gt;
+    &lt;p&gt;A fictional writer exploring thoughtful interfaces, useful words, and the spaces in between.&lt;/p&gt;
+    &lt;a href="https://example.com/authors/alex-morgan"&gt;More from Alex&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</textarea>
+                <p id="help-author-card" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="steps" class="docs-block" aria-labelledby="title-steps">
+            <div class="docs-block-heading">
+              <div><h3 id="title-steps"><span class="docs-block-number">13</span>Steps</h3><p>Turn a process into a clear, ordered path.</p></div>
+              <span class="docs-tag">Page sections</span>
+            </div>
+            <div class="docs-stage" data-component="steps">
+<section>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > h2 { margin: 0 0 1.25rem; font-size: 1.375rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; }
+      :scope > ol { display: grid; gap: 1.25rem; margin: 0; padding-inline-start: 1.75rem; }
+      :scope > ol > li { padding-inline-start: .5rem; }
+      :scope > ol > li::marker { color: var(--bui-primary, #5943d6); font-weight: 750; }
+      :scope > ol > li > strong { font-size: .9375rem; font-weight: 700; }
+      :scope > ol > li > p { margin: .125rem 0 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+    }
+  </style>
+  <h2>From an idea to a page.</h2>
+  <ol>
+    <li><strong>Find the one thing.</strong><p>Choose the idea you want your reader to take away.</p></li>
+    <li><strong>Give it a clear shape.</strong><p>Build around a useful heading, a few paragraphs, and a next step.</p></li>
+    <li><strong>Read it out loud.</strong><p>Trim what gets in the way. Leave the parts that sound like you.</p></li>
+  </ol>
+</section>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-steps">Steps source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Csection%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20padding%3A%20clamp%281.25rem%2C%204vw%2C%202rem%29%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-surface%2C%20%23fff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20h2%20%7B%20margin%3A%200%200%201.25rem%3B%20font-size%3A%201.375rem%3B%20font-weight%3A%20750%3B%20line-height%3A%201.3%3B%20letter-spacing%3A%20-.025em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20ol%20%7B%20display%3A%20grid%3B%20gap%3A%201.25rem%3B%20margin%3A%200%3B%20padding-inline-start%3A%201.75rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20ol%20%3E%20li%20%7B%20padding-inline-start%3A%20.5rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20ol%20%3E%20li%3A%3Amarker%20%7B%20color%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20font-weight%3A%20750%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20ol%20%3E%20li%20%3E%20strong%20%7B%20font-size%3A%20.9375rem%3B%20font-weight%3A%20700%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20ol%20%3E%20li%20%3E%20p%20%7B%20margin%3A%20.125rem%200%200%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.9375rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Ch2%3EFrom%20an%20idea%20to%20a%20page.%3C%2Fh2%3E%0A%20%20%3Col%3E%0A%20%20%20%20%3Cli%3E%3Cstrong%3EFind%20the%20one%20thing.%3C%2Fstrong%3E%3Cp%3EChoose%20the%20idea%20you%20want%20your%20reader%20to%20take%20away.%3C%2Fp%3E%3C%2Fli%3E%0A%20%20%20%20%3Cli%3E%3Cstrong%3EGive%20it%20a%20clear%20shape.%3C%2Fstrong%3E%3Cp%3EBuild%20around%20a%20useful%20heading%2C%20a%20few%20paragraphs%2C%20and%20a%20next%20step.%3C%2Fp%3E%3C%2Fli%3E%0A%20%20%20%20%3Cli%3E%3Cstrong%3ERead%20it%20out%20loud.%3C%2Fstrong%3E%3Cp%3ETrim%20what%20gets%20in%20the%20way.%20Leave%20the%20parts%20that%20sound%20like%20you.%3C%2Fp%3E%3C%2Fli%3E%0A%20%20%3C%2Fol%3E%0A%3C%2Fsection%3E%0A" download="steps.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-steps" aria-describedby="help-steps" readonly spellcheck="false" wrap="off" rows="14">&lt;section&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; h2 { margin: 0 0 1.25rem; font-size: 1.375rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; }
+      :scope &gt; ol { display: grid; gap: 1.25rem; margin: 0; padding-inline-start: 1.75rem; }
+      :scope &gt; ol &gt; li { padding-inline-start: .5rem; }
+      :scope &gt; ol &gt; li::marker { color: var(--bui-primary, #5943d6); font-weight: 750; }
+      :scope &gt; ol &gt; li &gt; strong { font-size: .9375rem; font-weight: 700; }
+      :scope &gt; ol &gt; li &gt; p { margin: .125rem 0 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+    }
+  &lt;/style&gt;
+  &lt;h2&gt;From an idea to a page.&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;strong&gt;Find the one thing.&lt;/strong&gt;&lt;p&gt;Choose the idea you want your reader to take away.&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Give it a clear shape.&lt;/strong&gt;&lt;p&gt;Build around a useful heading, a few paragraphs, and a next step.&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Read it out loud.&lt;/strong&gt;&lt;p&gt;Trim what gets in the way. Leave the parts that sound like you.&lt;/p&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;
+</textarea>
+                <p id="help-steps" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+          <section id="cta" class="docs-block" aria-labelledby="title-cta">
+            <div class="docs-block-heading">
+              <div><h3 id="title-cta"><span class="docs-block-number">14</span>Call to action</h3><p>A simple, intentional next step.</p></div>
+              <span class="docs-tag">Page sections</span>
+            </div>
+            <div class="docs-stage" data-component="cta">
+<section>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; padding: clamp(1.5rem, 5vw, 2.5rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-tint, #f1edff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > div { flex: 1 1 17rem; min-inline-size: 0; }
+      :scope > div > h2 { margin: 0 0 .5rem; font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 750; line-height: 1.25; letter-spacing: -.035em; text-wrap: balance; }
+      :scope > div > p { max-inline-size: 44ch; margin: 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope > a { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-block-size: 2.875rem; max-inline-size: 100%; padding: .625rem 1.125rem; border: 1px solid transparent; border-radius: .625rem; background: var(--bui-primary, #5943d6); color: var(--bui-primary-text, #fff); font-size: .875rem; font-weight: 700; text-align: center; text-decoration: none; }
+      :scope > a:hover { text-decoration: underline; text-underline-offset: .2em; }
+      :scope > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) { :scope > a { border-color: ButtonText; } }
+    }
+  </style>
+  <div>
+    <h2>Keep a good idea going.</h2>
+    <p>Find more notes on thoughtful design, useful writing, and making things for the web.</p>
+  </div>
+  <a href="https://example.com/journal">Explore the journal</a>
+</section>
+</div>
+
+            <details class="docs-source">
+              <summary>Get HTML<span class="docs-source-hint">Complete fragment · styles included</span></summary>
+              <div class="docs-source-body">
+                <div class="docs-source-toolbar">
+                  <label for="source-cta">Call to action source · HTML</label>
+                  <a href="data:text/plain;charset=utf-8,%3Csection%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20%40scope%20%7B%0A%20%20%20%20%20%20%3Ascope%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20flex%3B%20flex-wrap%3A%20wrap%3B%20align-items%3A%20center%3B%20justify-content%3A%20space-between%3B%20gap%3A%201.25rem%202rem%3B%20padding%3A%20clamp%281.5rem%2C%205vw%2C%202.5rem%29%3B%20border%3A%201px%20solid%20var%28--bui-border%2C%20%23e4e2eb%29%3B%20border-radius%3A%201rem%3B%20background%3A%20var%28--bui-tint%2C%20%23f1edff%29%3B%20color%3A%20var%28--bui-text%2C%20%23202437%29%3B%20font%3A%20400%201rem%2F1.6%20system-ui%2C%20sans-serif%3B%20overflow-wrap%3A%20anywhere%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%7B%20flex%3A%201%201%2017rem%3B%20min-inline-size%3A%200%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20h2%20%7B%20margin%3A%200%200%20.5rem%3B%20font-size%3A%20clamp%281.375rem%2C%203vw%2C%201.75rem%29%3B%20font-weight%3A%20750%3B%20line-height%3A%201.25%3B%20letter-spacing%3A%20-.035em%3B%20text-wrap%3A%20balance%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20div%20%3E%20p%20%7B%20max-inline-size%3A%2044ch%3B%20margin%3A%200%3B%20color%3A%20var%28--bui-muted%2C%20%23585c70%29%3B%20font-size%3A%20.9375rem%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20a%20%7B%20box-sizing%3A%20border-box%3B%20display%3A%20inline-flex%3B%20align-items%3A%20center%3B%20justify-content%3A%20center%3B%20min-block-size%3A%202.875rem%3B%20max-inline-size%3A%20100%25%3B%20padding%3A%20.625rem%201.125rem%3B%20border%3A%201px%20solid%20transparent%3B%20border-radius%3A%20.625rem%3B%20background%3A%20var%28--bui-primary%2C%20%235943d6%29%3B%20color%3A%20var%28--bui-primary-text%2C%20%23fff%29%3B%20font-size%3A%20.875rem%3B%20font-weight%3A%20700%3B%20text-align%3A%20center%3B%20text-decoration%3A%20none%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20a%3Ahover%20%7B%20text-decoration%3A%20underline%3B%20text-underline-offset%3A%20.2em%3B%20%7D%0A%20%20%20%20%20%20%3Ascope%20%3E%20a%3Afocus-visible%20%7B%20outline%3A%203px%20solid%20var%28--bui-primary%2C%20%235943d6%29%3B%20outline-offset%3A%204px%3B%20%7D%0A%20%20%20%20%20%20%40media%20%28forced-colors%3A%20active%29%20%7B%20%3Ascope%20%3E%20a%20%7B%20border-color%3A%20ButtonText%3B%20%7D%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Ch2%3EKeep%20a%20good%20idea%20going.%3C%2Fh2%3E%0A%20%20%20%20%3Cp%3EFind%20more%20notes%20on%20thoughtful%20design%2C%20useful%20writing%2C%20and%20making%20things%20for%20the%20web.%3C%2Fp%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2Fjournal%22%3EExplore%20the%20journal%3C%2Fa%3E%0A%3C%2Fsection%3E%0A" download="cta.html">Download .html <span aria-hidden="true">↓</span></a>
+                </div>
+                <textarea id="source-cta" aria-describedby="help-cta" readonly spellcheck="false" wrap="off" rows="14">&lt;section&gt;
+  &lt;style&gt;
+    @scope {
+      :scope { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; padding: clamp(1.5rem, 5vw, 2.5rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-tint, #f1edff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope &gt; div { flex: 1 1 17rem; min-inline-size: 0; }
+      :scope &gt; div &gt; h2 { margin: 0 0 .5rem; font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 750; line-height: 1.25; letter-spacing: -.035em; text-wrap: balance; }
+      :scope &gt; div &gt; p { max-inline-size: 44ch; margin: 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope &gt; a { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-block-size: 2.875rem; max-inline-size: 100%; padding: .625rem 1.125rem; border: 1px solid transparent; border-radius: .625rem; background: var(--bui-primary, #5943d6); color: var(--bui-primary-text, #fff); font-size: .875rem; font-weight: 700; text-align: center; text-decoration: none; }
+      :scope &gt; a:hover { text-decoration: underline; text-underline-offset: .2em; }
+      :scope &gt; a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) { :scope &gt; a { border-color: ButtonText; } }
+    }
+  &lt;/style&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Keep a good idea going.&lt;/h2&gt;
+    &lt;p&gt;Find more notes on thoughtful design, useful writing, and making things for the web.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;a href="https://example.com/journal"&gt;Explore the journal&lt;/a&gt;
+&lt;/section&gt;
+</textarea>
+                <p id="help-cta" class="docs-source-help">Click inside the source, select all (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd>), then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd>). On touch, long-press, select all, then copy.</p>
+              </div>
+            </details>
+          </section>
+        </div>
+      </section>
+      <div class="docs-guidelines">
+        <section id="vue" class="docs-reference" aria-labelledby="vue-title">
+          <h2 id="vue-title">Fits right into Vue’s v-html.</h2>
+          <p>Each download is one HTML fragment, including its own style element. Put the complete fragment in your existing trusted string and render it into a flow-content container:</p>
+          <pre><code>&lt;div v-html="content"&gt;&lt;/div&gt;</code></pre>
+          <p>The supplied fragments contain no literal backticks, interpolation markers, or backslashes, so they can be pasted into a backtick-delimited string without escaping. They contain no Vue directives and need no Vue compilation.</p>
+          <p>Keep the embedded style as the first child of the block. Use a host such as <code>&lt;div&gt;</code>, not <code>&lt;p&gt;</code>. Vue does not sanitize <code>v-html</code>; only render content you trust. HTML filtering in some editors can remove style elements.</p>
+          <p><a href="https://vuejs.org/api/built-in-directives.html#v-html">Read Vue’s v-html documentation ↗</a></p>
+        </section>
+        <section id="customize" class="docs-reference" aria-labelledby="customize-title">
+          <h2 id="customize-title">Your words. Your colors.</h2>
+          <p>Edit the text, links, and heading levels to fit your page. Replace the example destinations and fictional people before publishing. The theme control above demonstrates shared CSS custom properties; every fragment also has its own light-theme defaults.</p>
+          <pre><code>&lt;div style="--bui-primary: #146c51; --bui-tint: #eaf6ef;"&gt;
+  &lt;!-- Paste your complete block here. --&gt;
+&lt;/div&gt;</code></pre>
+          <p>Available properties: <code>--bui-surface</code>, <code>--bui-text</code>, <code>--bui-muted</code>, <code>--bui-primary</code>, <code>--bui-primary-text</code>, <code>--bui-tint</code>, and <code>--bui-border</code>. Check contrast whenever you change a color pair.</p>
+          <p>Scopes keep a block’s selectors local; they are not Shadow DOM. Your page’s CSS can still affect a block, especially high-specificity or <code>!important</code> rules. Check the result in your actual page layout.</p>
+        </section>
+        <section id="copying" class="docs-reference" aria-labelledby="copying-title">
+          <h2 id="copying-title">An honest note about copying.</h2>
+          <p>HTML and CSS cannot write to your clipboard. Get HTML opens the complete, selectable source; copying uses your browser’s native copy command. Downloads save the same fragment with its embedded styles, without a network request.</p>
+          <p>A one-click clipboard button would need JavaScript and the Clipboard API. This library and documentation site intentionally stay script-free. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText">About the Clipboard API ↗</a></p>
+        </section>
+        <section id="browser-support" class="docs-reference" aria-labelledby="support-title">
+          <h2 id="support-title">Modern CSS, native HTML.</h2>
+          <p>The blocks use an embedded, implicit <code>@scope</code> to keep their styles together. Use a current browser with CSS <code>@scope</code> support. Older browsers retain the semantic content and native FAQ interaction, but may show unstyled blocks.</p>
+          <ul>
+            <li>Fluid spacing, logical properties, and wrapping layouts adapt to the available space. Tables and carousels scroll inside their own labeled region when necessary.</li>
+            <li>FAQ and form controls use native HTML interaction. The carousel uses native scrolling and CSS scroll snap. Blocks can be repeated without ID collisions, and there is no animation, JavaScript, CDN, font download, or analytics.</li>
+            <li>The documentation theme switch uses <code>:has()</code> and lasts for the current page view. Downloads keep their portable light defaults; copy your preferred color properties too if you want a custom theme.</li>
+            <li>Your Content Security Policy must allow the embedded styles, for example through matching style hashes or server-provided nonces. A policy that blocks inline styles will block these component styles.</li>
+          </ul>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope">CSS @scope support ↗</a> · <a href="https://html.spec.whatwg.org/dev/semantics.html#the-style-element">The HTML style element ↗</a></p>
+        </section>
+      </div>
+      <footer class="docs-footer"><span>Block UI · Made for the open web.</span><span><a href="https://github.com/gaomingzhao-system/block-ui-experimental">Source on GitHub</a> · <a href="https://github.com/gaomingzhao-system/block-ui-experimental/blob/main/LICENSE">MIT license</a></span></footer>
+    </main>
+  </div>
+</body>
+</html>

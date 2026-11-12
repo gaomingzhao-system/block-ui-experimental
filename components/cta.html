@@ -1,0 +1,19 @@
+<section>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; padding: clamp(1.5rem, 5vw, 2.5rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-tint, #f1edff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > div { flex: 1 1 17rem; min-inline-size: 0; }
+      :scope > div > h2 { margin: 0 0 .5rem; font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 750; line-height: 1.25; letter-spacing: -.035em; text-wrap: balance; }
+      :scope > div > p { max-inline-size: 44ch; margin: 0; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope > a { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-block-size: 2.875rem; max-inline-size: 100%; padding: .625rem 1.125rem; border: 1px solid transparent; border-radius: .625rem; background: var(--bui-primary, #5943d6); color: var(--bui-primary-text, #fff); font-size: .875rem; font-weight: 700; text-align: center; text-decoration: none; }
+      :scope > a:hover { text-decoration: underline; text-underline-offset: .2em; }
+      :scope > a:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) { :scope > a { border-color: ButtonText; } }
+    }
+  </style>
+  <div>
+    <h2>Keep a good idea going.</h2>
+    <p>Find more notes on thoughtful design, useful writing, and making things for the web.</p>
+  </div>
+  <a href="https://example.com/journal">Explore the journal</a>
+</section>

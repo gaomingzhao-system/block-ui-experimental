@@ -1,0 +1,24 @@
+<div role="group" aria-label="Reading preferences">
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; display: grid; gap: .5rem; max-inline-size: 28rem; color: var(--bui-text, #202437); font: 400 .9375rem/1.5 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > label { position: relative; display: flex; align-items: center; gap: .75rem; min-block-size: 2.75rem; cursor: pointer; }
+      :scope > label > input { flex: 0 0 auto; inline-size: 1.125rem; block-size: 1.125rem; margin: 0; accent-color: var(--bui-primary, #5943d6); }
+      :scope > label > input:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      :scope > label:has(> input:disabled) { color: var(--bui-muted, #585c70); cursor: not-allowed; }
+      :scope > label > input[role="switch"] { position: absolute; inline-size: 1px; block-size: 1px; clip-path: inset(50%); overflow: hidden; }
+      :scope > label > input[role="switch"] + span { box-sizing: border-box; display: flex; align-items: center; flex: 0 0 2.75rem; block-size: 1.625rem; padding: .1875rem; border: 1px solid var(--bui-muted, #585c70); border-radius: 100px; background: var(--bui-surface, #fff); }
+      :scope > label > input[role="switch"] + span::before { content: ""; inline-size: 1.125rem; block-size: 1.125rem; border-radius: 50%; background: var(--bui-muted, #585c70); }
+      :scope > label > input[role="switch"]:checked + span { justify-content: flex-end; border-color: var(--bui-primary, #5943d6); background: var(--bui-primary, #5943d6); }
+      :scope > label > input[role="switch"]:checked + span::before { background: var(--bui-primary-text, #fff); }
+      :scope > label > input[role="switch"]:focus-visible + span { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 4px; }
+      @media (forced-colors: active) {
+        :scope > label > input[role="switch"] { position: static; inline-size: 1.125rem; block-size: 1.125rem; clip-path: none; overflow: visible; }
+        :scope > label > input[role="switch"] + span { display: none; }
+      }
+    }
+  </style>
+  <label><input type="checkbox"><span>Save my reading progress</span></label>
+  <label><input type="checkbox" role="switch" checked><span aria-hidden="true"></span><span>Email updates</span></label>
+  <label><input type="checkbox" disabled><span>Team alerts (unavailable)</span></label>
+</div>

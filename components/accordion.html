@@ -1,0 +1,29 @@
+<section>
+  <style>
+    @scope {
+      :scope { box-sizing: border-box; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--bui-border, #e4e2eb); border-radius: 1rem; background: var(--bui-surface, #fff); color: var(--bui-text, #202437); font: 400 1rem/1.6 system-ui, sans-serif; overflow-wrap: anywhere; }
+      :scope > h2 { margin: 0 0 .375rem; font-size: 1.375rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; }
+      :scope > p { margin: 0 0 1.25rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+      :scope > details { border-block-start: 1px solid var(--bui-border, #e4e2eb); }
+      :scope > details > summary { padding-block: 1rem; cursor: pointer; font-weight: 650; }
+      :scope > details > summary::marker { color: var(--bui-primary, #5943d6); }
+      :scope > details > summary:hover { color: var(--bui-primary, #5943d6); }
+      :scope > details > summary:focus-visible { outline: 3px solid var(--bui-primary, #5943d6); outline-offset: 3px; border-radius: .25rem; }
+      :scope > details > p { margin: 0 0 1rem; color: var(--bui-muted, #585c70); font-size: .9375rem; }
+    }
+  </style>
+  <h2>A few good questions.</h2>
+  <p>The essentials, with a little room for detail.</p>
+  <details>
+    <summary>Do I need to install anything?</summary>
+    <p>No. Copy this entire block, including its style element, into your page. The browser handles the disclosure controls.</p>
+  </details>
+  <details>
+    <summary>Can I make it feel like my site?</summary>
+    <p>Yes. Change the text and colors in the block, or set the shared custom properties on a parent element.</p>
+  </details>
+  <details>
+    <summary>Can several answers stay open?</summary>
+    <p>Yes. Each answer opens independently, so your readers can compare details without losing their place.</p>
+  </details>
+</section>
